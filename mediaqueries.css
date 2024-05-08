@@ -1,0 +1,156 @@
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  .gt {
+    margin-top: 100px;
+    font-size: 1.25rem;
+
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+  .cr{
+    text-align: center;
+    flex-basis: 100%;
+    font-size: 1.25rem;
+    width: 600px;
+    margin-top: 100px;
+    padding-right: 500px;
+    text-align: center;
+    position:relative; left:-150px;
+    height: 83vh;
+    margin-right:6000px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    margin-top: 300px;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: 50px;;
+    height:50px;
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__pic-container img{
+    height: 270px;
+    width: 200px;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+
+  }
+  .gt {
+    margin-top: 100px;
+    font-size: 1.25rem;
+
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+  .gt2{
+    font-size: 1rem;
+  
+    margin-top:100px ;
+  }
+  .cr{
+    text-align: center;
+    flex-basis: 100%;
+    font-size: 1.25rem;
+    width: 600px;
+    margin-top: -5px;
+    padding-right: 500px;
+    text-align: center;
+    position:relative; left:-150px;
+    height: 83vh;
+    margin-right:6000px;
+  }
+  .btns{
+    margin-left: 20px;
+  }
+  .cs{
+    width:400px;
+    height:50px;
+  }
