@@ -54,7 +54,7 @@
     text-align: center;
     flex-basis: 100%;
     font-size: 1.25rem;
-    width: 10px;
+    width: 100%;
     margin-top: 50000px;
     padding-right: 500px;
     text-align: center;
@@ -145,14 +145,14 @@
     font-size: 1.25rem;
     margin-left: -400px;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 120px;
 
   }
 
   .section__text__p4{
     flex-wrap: wrap;
     font-size: 1.25rem;
-    margin-left: 200px;
+    margin-left: 70px;
     text-align: center;
     margin-top: 200px;
   }
@@ -166,7 +166,7 @@
   }
   .title2 {
     font-size: 1.5rem;
-    margin-left: 200px;
+    margin-left: 70px;
   }
   .text-container {
     text-align: justify;
@@ -179,7 +179,7 @@
     text-align: center;
     flex-basis: 100%;
     font-size: 1.25rem;
-    width: 100%;
+    width: 800px;
     margin-top: 500px;
     padding-right: 500px;
     text-align: center;
