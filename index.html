@@ -7,6 +7,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
@@ -366,7 +367,8 @@
     </section>
     <section id="contact" class="c">
       <div class="animate">
-      <div class="cr">
+        <div data-aos="fade-in" data-aos-duration="4000"></div>
+      <div class="cr"data-aos="zoom-out" 0data-aos-duration="4000">
         <div class="gt2">
       <p class="section__text__p4">Get in Touch</p>
       <h1 class="title2">Contact Me</h1></div>
@@ -434,7 +436,7 @@
     
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    <script> var typed= new Typed(".auto-type",{strings:[" excel in software development."," love coding during my free time"," innovate with technology."," thrive on challenges."]
+    <script> var typed= new Typed(".auto-type",{strings:[" am a full stack webDev."," love coding "," create exceptional experiences."," thrive on challenges."]
     ,typeSpeed: 50,
     backSpeed: 10,
     loop: true
@@ -448,17 +450,24 @@
 
   });
   
-  ScrollReveal().reveal('.section__text__p2,.section__text__p1,.title',{delay:10 , origin: 'left'});
-  ScrollReveal().reveal('.a',{delay:500 , origin: 'bottom'});
-  ScrollReveal().reveal('.e',{delay:500 , origin: 'bottom'});
-  ScrollReveal().reveal('.c',{delay:500 , origin: 'bottom'});
+  ScrollReveal().reveal('.section__text__p2,.section__text__p1,.section__text__p3,.section__text__p4,.title',{delay:10 , origin: 'left'});
+  ScrollReveal().reveal('.a',{delay:50 , origin: 'bottom'});
+  ScrollReveal().reveal('.e',{delay:50 , origin: 'bottom'});
+  ScrollReveal().reveal('.c',{delay:50 , origin: 'bottom'});
   
-  ScrollReveal().reveal('.details-container',{delay:700 , origin: 'right'});
-  ScrollReveal().reveal('.article-container article',{delay:600 , origin: 'top',interval:100});
+  ScrollReveal().reveal('.details-container',{delay:70 , origin: 'right'});
+  ScrollReveal().reveal('.article-container article',{delay:80, origin: 'top',interval:100});
+  ScrollReveal().reveal('.animate cr',{delay:80, origin: 'bottom',interval:100});
+  ScrollReveal().reveal('.contact-info-upper-container ,.contact-info-container',{delay:80, origin: 'bottom',interval:150});
   
   
   </script>
+
   </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   
   </body>
 </html>
