@@ -54,18 +54,21 @@
     text-align: center;
     flex-basis: 100%;
     font-size: 1.25rem;
-    width: 600px;
-    margin-top: 100px;
+    width: 10px;
+    margin-top: 50000px;
     padding-right: 500px;
     text-align: center;
-    position:relative; left:-150px;
+    position:relative; left:-200px;
     height: 83vh;
     margin-right:6000px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  #contact,
+  #contact{
+    height: 83vh;
+    margin-bottom: 0;
+  }
   footer {
     height: 40vh;
   }
@@ -88,6 +91,10 @@
   .contact-info-container {
     margin: 0;
   }
+
+.contact-info-upper-container{
+  margin-top: 200px;
+}
   .contact-info-container p,
   .nav-links li a {
     font-size: 1rem;
@@ -99,10 +106,28 @@
     font-size: 1.5rem;
   }
   .nav-links {
-    margin-top: 300px;
+    margin-top: 600px;
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+  }
+
+  .section__text{
+    margin-top:100px;
+  }
+
+  .mv{
+    height: 83vh;
+    font-size: 1.5rem;
+    width:100%;
+  }
+  
+  .span{
+    text-align: center;
+    position:relative; left:-200px;
+    
+  width:100%;
+    margin-top: 600px;
   }
   .section__pic-container {
     width: 50px;;
@@ -115,9 +140,21 @@
     height: 270px;
     width: 200px;
   }
-  .section__text__p2 {
+  .section__text__p3 {
+    flex-wrap: wrap;
     font-size: 1.25rem;
+    margin-left: -400px;
+    text-align: center;
+    margin-top: 200px;
 
+  }
+
+  .section__text__p4{
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+    margin-left: 200px;
+    text-align: center;
+    margin-top: 200px;
   }
   .gt {
     margin-top: 100px;
@@ -127,25 +164,28 @@
   .title {
     font-size: 2rem;
   }
+  .title2 {
+    font-size: 1.5rem;
+    margin-left: 200px;
+  }
   .text-container {
     text-align: justify;
   }
   .gt2{
     font-size: 1rem;
-  
-    margin-top:100px ;
+    
   }
   .cr{
     text-align: center;
     flex-basis: 100%;
     font-size: 1.25rem;
-    width: 600px;
-    margin-top: -5px;
+    width: 100%;
+    margin-top: 500px;
     padding-right: 500px;
     text-align: center;
-    position:relative; left:-150px;
+    position:relative; left:-200px;
     height: 83vh;
-    margin-right:6000px;
+    margin-right:60px;
   }
   .btns{
     margin-left: 20px;
@@ -154,3 +194,7 @@
     width:400px;
     height:50px;
   }
+  nav-links-container{
+    margin-top: 100px;
+  }
+}
