@@ -7,15 +7,17 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
+    <div class="bg">
     <nav id="desktop-nav">
       <div class="logo">My Portfolio</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
+          
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -36,14 +38,14 @@
         </div>
       </div>
     </nav>
-    <section id="profile">
+    <section id="profile" class="p">
       <div class="section__pic-container">
         <img src="./assets/pc.jpg" alt="goko ivy profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Goko Ivy</h1>
-        <p class="section__text__p2">Software Developer</p>
+        <p class="title">Goko Ivy</p>
+        <h1 class="section__text__p2"> Software Developer</h1>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -70,8 +72,13 @@
           />
         </div>
       </div>
+      <br>
+      
     </section>
-    <section id="about">
+    
+      <div id="mv"> <p class="section__text__p3"> I <span class="auto-type"></span></p> </div>
+    <section id="about" class= "a">
+      <div class = "animate">
       <div class="gt">
       <p class="section__text__p1">Get To Know More</p></div>
       <h1 class="title">About Me</h1>
@@ -111,8 +118,10 @@
         class="icon arrow"
         onclick="location.href='./#experience'"
       />
+    </div>
     </section>
-    <section id="experience">
+    <section id="experience" class="e">
+      <div class="animate">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
@@ -353,12 +362,15 @@
         class="icon arrow"
         onclick="location.href='./#contact'"
       />
+    </div>
     </section>
-    <section id="contact">
-      <div class="gt2">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1></div>
+    <section id="contact" class="c">
+      <div class="animate">
       <div class="cr">
+        <div class="gt2">
+      <p class="section__text__p4">Get in Touch</p>
+      <h1 class="title2">Contact Me</h1></div>
+      
         <form name="submit-to-google-sheet">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
@@ -387,6 +399,7 @@
 
         
       </div>
+    </div>
     </section>
     <footer>
       <nav>
@@ -394,7 +407,7 @@
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
+            
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -418,5 +431,34 @@
           .catch(error => console.error('Error!', error.message))
       })
     </script>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script> var typed= new Typed(".auto-type",{strings:[" excel in software development."," love coding during my free time"," innovate with technology."," thrive on challenges."]
+    ,typeSpeed: 50,
+    backSpeed: 10,
+    loop: true
+  
+  })</script>
+  <script> ScrollReveal({
+    reset: true,
+    distance: '60px',
+    duration: 2500,
+    delay:400
+
+  });
+  
+  ScrollReveal().reveal('.section__text__p2,.section__text__p1,.title',{delay:10 , origin: 'left'});
+  ScrollReveal().reveal('.a',{delay:500 , origin: 'bottom'});
+  ScrollReveal().reveal('.e',{delay:500 , origin: 'bottom'});
+  ScrollReveal().reveal('.c',{delay:500 , origin: 'bottom'});
+  
+  ScrollReveal().reveal('.details-container',{delay:700 , origin: 'right'});
+  ScrollReveal().reveal('.article-container article',{delay:600 , origin: 'top',interval:100});
+  
+  
+  </script>
+  </div>
+  
   </body>
 </html>
