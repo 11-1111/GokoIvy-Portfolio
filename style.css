@@ -11,6 +11,20 @@
   margin-left: 400px;
 }
 
+.container {
+  /*border: 2px solid red; /* Red border, adjust thickness as needed */
+  padding: 10px; /* Add padding for better visibility */
+  margin: 10px; /* Add margin for spacing between divs */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+
+
+
 body {
   font-family: "Poppins", sans-serif;
   background-image: url('assets/5\ \(2\).jpg');
