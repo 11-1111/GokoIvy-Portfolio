@@ -126,11 +126,12 @@
     margin: 0 10px;
   }
   .faded-image{
+    border-radius: 100% 100% 90% 100% / 98% 100% 0% 100%  ;;
     display: block; /* Ensures the image is treated as a block element */
   margin: auto; /* Centers the image horizontally */
   max-width: 80%; /* Ensures the image does not exceed the width of its container */
   width: 60%; /* Reduces the size of the image to 50% of its container */
-  border-radius: 10px; /* Optional: adds rounded corners to the image */
+   /* Optional: adds rounded corners to the image */
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5); 
   transition: transform 0.3s ease-in-out;
   

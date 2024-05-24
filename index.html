@@ -39,6 +39,7 @@
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          
         </ul>
       </div>
     </nav>
@@ -48,17 +49,22 @@
     <nav id="hamburger-nav">
       <div class="logo"></div>
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div>
+          <img src="./assets/menu.png" alt="menu" onclick="toggleMenu()" class="hamburger-icon"/>
+          
+          
         </div>
-        <div class="menu-links">
+        <div class="menu-links" id="menu">
+          <img src="./assets/icons8-cancel-48.png" alt="Close" class="close-icon" id="close-icon" onclick="toggleMenu()">
+          <ul>
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          
+        </ul>
         </div>
+
       </div>
     </nav>
   </div>
@@ -69,7 +75,7 @@
         <i style="--clr:#00ff0a;"></i>
         <i style="--clr:#bd1f31;"></i>
         <i style="--clr:#040ec5;"></i>
-        <img src="./assets/pc3.jpg" alt="goko ivy profile picture" class="faded-image" />
+        <img src="./assets/bck2.gif" alt="goko ivy profile picture" class="faded-image" />
       </div>
       </div>
       <div class="section__text">
@@ -442,7 +448,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="tel:+25471-879-6756">Call</a></p>
+          <p><a href="tel:+25471-879-6756" class="aa">Call</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -450,7 +456,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:examplemail@gmail.com">gokoivy2@gmail.com</a></p>
+          <p><a href="mailto:examplemail@gmail.com"class="aa">gokoivy2@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -458,7 +464,7 @@
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com/in/goko-ivy-04108021b/recent-activity/all/">LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/goko-ivy-04108021b/recent-activity/all/" class="aa">LinkedIn</a></p>
         </div>
 
         
@@ -473,7 +479,7 @@
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
-            
+            <li><a href="#projects">projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
