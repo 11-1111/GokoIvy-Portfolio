@@ -55,6 +55,7 @@
   #profile {
     height: 83vh;
     margin-bottom: 0;
+    margin-top: -120px;
   }
   article {
     font-size: 1rem;
@@ -94,6 +95,9 @@
   .section__text__p2 {
     font-size: 1.25rem;
   }
+  .section__text__p3{
+    font-size: 1.25rem;
+  }
   .title {
     font-size: 2rem;
   }
@@ -126,16 +130,20 @@
     margin: 0 10px;
   }
   .faded-image{
-    border-radius: 100% 100% 90% 100% / 98% 100% 0% 100%  ;;
+    
+    border-radius: 100% 66% 100% 89% / 98% 100% 100% 65%   ;;
     display: block; /* Ensures the image is treated as a block element */
   margin: auto; /* Centers the image horizontally */
   max-width: 80%; /* Ensures the image does not exceed the width of its container */
   width: 60%; /* Reduces the size of the image to 50% of its container */
    /* Optional: adds rounded corners to the image */
-  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5); 
+   box-shadow: 0 0 30px 20px rgba(90, 64, 23, 0.5);
   transition: transform 0.3s ease-in-out;
   
   /* Adds a shadow with fading effect */
+  }
+  #type{
+    margin-top:-80px;
   }
   
   .A ,.PP,.B {
@@ -156,4 +164,12 @@
   .faded-image:hover {
     transform: scale(1.1); /* Scales the image up by 20% when hovered */
   }
+}
+@media (max-width: 768px) {#type{
+  margin-top:-10px;
+  
+}
+.section__text__p3{
+  font-size: 1rem;
+  
 }

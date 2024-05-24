@@ -283,7 +283,7 @@ section {
 .section__text__p2 {
   color: #a9a9a9;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  
+ 
   font-weight: 200;
   font-style: normal;
   font-size: 2rem;
@@ -493,8 +493,9 @@ section {
 .faded-image{
   display: block; /* Ensures the image is treated as a block element */
   max-width: 100%; /* Makes sure the image is responsive */
-  border-radius: 1% 100% 90% 100% / 98% 100% 0% 100%   ;;/* Optional: adds rounded corners to the image */
-  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 100% 66% 100% 89% / 98% 59% 100% 65%      ;;/* Optional: adds rounded corners to the image */
+  box-shadow: 0 0 30px 20px rgba(90, 64, 23, 0.5);
+  border:none;
   transition: transform 0.3s ease-in-out;
 }
 .faded-image:hover{
