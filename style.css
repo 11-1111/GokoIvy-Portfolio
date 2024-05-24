@@ -7,8 +7,7 @@
   padding: 0;
 }
 #mv{
-  position:relative;
-  margin-left: 400px;
+ text-align: left;
 }
 
 .container {
@@ -27,18 +26,20 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url('assets/5\ \(2\).jpg');
+  background-image: url('assets/bck3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   height: 100vh;
+  color: #fff;
 }
 img {
   border-radius: 50%;
 }
 html {
   scroll-behavior: smooth;
+  color: #fff;
 }
 
 p {
@@ -70,12 +71,17 @@ nav {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+  
 }
 
 a {
-  color: black;
+  color: #ff4c29;
+
   text-decoration: none;
   text-decoration-color: white;
+}
+h3{
+  color: #a9a9a9;
 }
 
 a:hover {
@@ -86,8 +92,15 @@ a:hover {
 }
 
 .logo {
+    background: linear-gradient(45deg, #d65f0a, #ff7f00, #945422, #a37c11, #d35050, #ce3434, #e42323);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+  
   font-size: 2rem;
+  color: #a9a9a9;
 }
+
 
 .logo:hover {
   cursor: default;
@@ -211,9 +224,16 @@ section {
 
 #profile {
   display: flex;
-  justify-content: center;
+  text-align: left;
   gap: 5rem;
   height: 80vh;
+  justify-content: flex-end; 
+}
+#type {
+  
+  
+  
+  justify-content: flex-start; 
 }
 
 .section__pic-container {
@@ -235,29 +255,82 @@ section {
 }
 
 .section__text__p1 {
+  color: #a9a9a9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   text-align: center;
+  
+}
+
+.section__texts{
+  color: #a9a9a9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: right;
 }
 
 .section__text__p2 {
-  font-size: 1.75rem;
+  color: #a9a9a9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  text-align: right;
 }
 .section__text__p3 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  color: #a9a9a9;
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
 }
 .section__text__p4 {
-  font-size: 1.75rem;
+  text-align: center;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 .title {
   font-size: 3rem;
   text-align: center;
+  color:#dcdcdc;
+}
+
+.titleN {
+  font-size: 5rem;
+  text-align: right;
 }
 .title2 {
   font-size: 3rem;
   text-align: center;
+}
+
+.fullstop {
+  width: 10px; /* Adjust size as needed */
+  height: 10px; /* Adjust size as needed */
+  background-color: #f00; /* Adjust dot color as needed */
+  border-radius: 50%; /* Makes the dot circular */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  margin: right -20px;
+}
+.extra {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 0;
+  display: inline-block;
+  /* Adjust height as needed */
+  background-color: #157936; /* Black color */
+}
+.extra1 {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 0;
+  display: inline-block;
+  /* Adjust height as needed */
+  background-color:transparent; /* Black color */
 }
 
 #socials-container {
@@ -266,7 +339,10 @@ section {
   margin-top: 1rem;
   gap: 1rem;
 }
-
+.p{
+  color:#a9a9a9; /* Light gray for paragraph text */
+  
+}
 /* ICONS */
 
 .icon {
@@ -287,16 +363,22 @@ section {
   transition: all 300ms ease;
   padding: 1rem;
   width: 8rem;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
+  background-color: #1e90ff; /* Button color */
+  color: #ffffff;
+  cursor: pointer;
+  
+
 }
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: rgb(180, 72, 22) 0.1rem solid;
 }
 
 .btn-color-1:hover,
 .btn-color-2:hover {
+
   cursor: pointer;
 }
 
@@ -306,8 +388,12 @@ section {
   color: white;
 }
 
+.btn-color-1{
+  background: linear-gradient(45deg, rgb(26, 13, 6), rgb(85, 58, 45), rgb(180, 72, 22));
+
+}
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: rgb(91, 44, 22);
 }
 
 .btn-color-2 {
@@ -332,7 +418,18 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  
 }
+.A ,.PP,.B {
+  width:100% ;/* Adjust the width as needed */
+  max-width: 1200px; /* Optional: Set a maximum width to ensure it doesn't grow too wide */
+  margin: 0 auto; 
+  border: none; /* Remove all other borders */
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, #0c0507, #695147,#a7671e,#f07d03,#695147,#0c0507); /* Adds a linear gradient border */
+  border-image-slice: 1; /* Ensures the entire border area is filled with the gradient */
+}
+
 
 .about-details-container {
   justify-content: center;
@@ -357,10 +454,10 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  background-color: #262626;
+  border-radius: 0rem;
+  border: none;
+  border-color: rgb(53, 53, 53);
   text-align: center;
 }
 
@@ -370,15 +467,32 @@ section {
 }
 
 .section__pic-container {
+
   height: 400px;
-  width: 400px;
-  margin: auto 0;
+  width: 4o0px;
+  
+}
+
+
+
+
+
+.faded-image{
+  display: block; /* Ensures the image is treated as a block element */
+  max-width: 100%; /* Makes sure the image is responsive */
+  border-radius: 1% 100% 90% 100% / 98% 100% 0% 100%   ;;/* Optional: adds rounded corners to the image */
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+.faded-image:hover{
+  transform: scale(1.2);
 }
 
 /* EXPERIENCE SECTION */
 
 #experience {
   position: relative;
+ 
 }
 
 .experience-sub-title {
@@ -392,6 +506,8 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: transparent;
+
 }
 
 .article-container {
@@ -429,6 +545,7 @@ article .icon {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
+  position: relative;
 }
 
 .project-title {
@@ -534,6 +651,11 @@ footer p {
   padding-left: 200px;
 }
 
-span{
+.auto-type{
   color: #ff4c29;
+}
+
+.large{
+  color: #ff4c29;
+ 
 }

@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +12,22 @@
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
   </head>
   <body><div class="container">
     <div class="bg">
@@ -18,16 +37,16 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
-          
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
   </div>
   </div>
-  <div class="continer">
+  <div class="container">
     <nav id="hamburger-nav">
-      <div class="logo">Goko Ivy</div>
+      <div class="logo"></div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -46,12 +65,18 @@
   <div class="container">
     <section id="profile" class="p">
       <div class="section__pic-container">
-        <img src="./assets/pc.jpg" alt="goko ivy profile picture" />
+        <div id="pic-container">
+        <i style="--clr:#00ff0a;"></i>
+        <i style="--clr:#bd1f31;"></i>
+        <i style="--clr:#040ec5;"></i>
+        <img src="./assets/pc3.jpg" alt="goko ivy profile picture" class="faded-image" />
+      </div>
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <p class="title">Goko Ivy</p>
-        <h1 class="section__text__p2"> Software Developer</h1>
+        <p class="section__texts">Hello, I'm</p>
+        <p class="titleN">Goko Ivy</p>
+        <h1 class="section__text__p2">Software Developer<span class="extra1"></span><span class="extra"></span></h1>
+
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -65,13 +90,13 @@
         </div>
         <div id="socials-container">
           <img
-            src="./assets/linkedin.png"
+            src="./assets/icons8-linked-in-48.png"
             alt="My LinkedIn profile"
             class="icon"
             onclick="location.href='https://www.linkedin.com/in/goko-ivy-04108021b/recent-activity/all/'"
           />
           <img
-            src="./assets/github.png"
+            src="./assets/icons8-github-48.png"
             alt="My Github profile"
             class="icon"
             onclick="location.href='https://github.com/11-1111'"
@@ -81,13 +106,18 @@
       <br>
       
     </section>
-  </div>
-  <div class="container">
-    
-      <div id="mv"> <p class="section__text__p3"> I <span class="auto-type"></span></p> </div>
-    </div>
-    <div class="container">
 
+  </div>
+  <section id="type" class="t">
+    <div class="container">
+    
+    <div id="mv"> <p class="section__text__p3"> I <span class="auto-type"></span></p> </div>
+  </div>
+  
+
+  </section>
+  <div class="container A">
+  
     <section id="about" class= "a">
       <div class = "animate">
       <div class="gt">
@@ -99,26 +129,29 @@
           <div class="about-containers">
             <div class="details-container">
               <img
-                src="./assets/experience.png"
+                src="./assets/icons8-briefcase-48.png"
                 alt="Experience icon"
                 class="icon"
               />
-              <h3>Experience</h3>
-              <p>2+ years <br />Software Development</p>
+              <h3 class ="e">Experience</h3>
+              <p class="p">2+ years <br />Software Development</p>
             </div>
             <div class="details-container">
               <img
-                src="./assets/education.png"
+                src="./assets/icons8-education-48.png"
                 alt="Education icon"
                 class="icon"
               />
               <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree in Computer Science</p>
+              <p class="p">B.Sc. Bachelors Degree in Computer Science</p> 
+
+
+
             </div>
           </div>
           <div class="text-container">
-            <p>
-              Hi there, I am a dedicated and innovative software engineer with a passion for developing efficient, scalable, and maintainable software solutions. With a solid foundation in computer science and years of hands-on experience in full-stack development, I thrive in dynamic environments where I can apply my problem-solving skills to tackle complex challenges. My expertise spans across a variety of technologies including Java, JavaScript, and SQL, and I am adept at utilizing modern frameworks and tools to streamline development processes.
+            <p class="p">
+              Hi there, I am a   <span class="large">    dedicated</span> and <span class="large">innovative </span>software engineer with a passion for developing efficient, scalable, and maintainable software solutions. With a solid foundation in computer science and years of hands-on experience in full-stack development, I thrive in dynamic environments where I can apply my problem-solving skills to tackle complex challenges. My expertise spans across a variety of technologies including Java, JavaScript, and SQL, and I am adept at utilizing modern frameworks and tools to streamline development processes.
             </p>
           </div>
         </div>
@@ -132,7 +165,7 @@
     </div>
     </section>
   </div>
-  <div class="container">
+  <div class="container B">
     <section id="experience" class="e">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
@@ -143,7 +176,7 @@
             <div class="article-container">
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/html.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -154,7 +187,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons8-css-48 (1).png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -165,7 +198,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons8-javascript-48.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -176,7 +209,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons8-react-50.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -187,7 +220,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons8-typescript-48.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -198,7 +231,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons8-ui-48.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -214,7 +247,7 @@
             <div class="article-container">
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/PHP.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -225,7 +258,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons8-mysql-48.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -236,7 +269,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons8-node-js-48.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -247,18 +280,18 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons8-vue-js-48.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
+                  <h3>Vue JS</h3>
+                  <p>Beginner</p>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons8-java-48.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -269,7 +302,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/icons8-git-48.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -282,14 +315,11 @@
           </div>
         </div>
       </div>
-     <!-- <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+     
     </section>
-    <section id="projects">
+    </div>
+    <div class="container PP">
+    <section id="projects" class="p">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
@@ -297,12 +327,22 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-1.png"
+                src="./assets/Capture3.PNG"
+                alt="Project 1"
+                class="project-img"
+              />
+              <img
+                src="./assets/Capture99.PNG"
+                alt="Project 1"
+                class="project-img"
+              />
+              <img
+                src="./assets/projectA.png"
                 alt="Project 1"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">Seat Ticketing System</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -367,7 +407,7 @@
             </div>
           </div>
         </div>
-      </div>-->
+      </div>
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -386,18 +426,27 @@
       <p class="section__text__p4">Get in Touch</p>
       <h1 class="title2">Contact Me</h1></div>
       
-        <form name="submit-to-google-sheet">
+        <!--<form name="submit-to-google-sheet">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="Message" rows="6" placeholder="Type Message"> </textarea>
+          <textarea name="Message" rows="6" style="resize: vertical;" placeholder="Type Message"></textarea>
+
           <button class="btns" type="submit">Send</button>
-        </form>
+        </form>-->
         <span id="msg"></span>
       </div>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
-            src="./assets/email.png"
+            src="./assets/icons8-call-48.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="tel:+25471-879-6756">Call</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/icons8-gmail-48.png"
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
@@ -405,7 +454,7 @@
         </div>
         <div class="contact-info-container">
           <img
-            src="./assets/linkedin.png"
+            src="./assets/icons8-linked-in-48.png"
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
@@ -461,15 +510,17 @@
   <script> ScrollReveal({
     reset: true,
     distance: '60px',
-    duration: 2500,
-    delay:400
+    duration: 800,
+    delay:100
 
   });
   
-  ScrollReveal().reveal('.section__text__p2,.section__text__p1,.section__text__p3,.section__text__p4,.title',{delay:10 , origin: 'left'});
+  ScrollReveal().reveal('.section__texts,.section__text__p2,.section__text__p1,.section__text__p3,.section__text__p4,.title',{delay:10 , origin: 'left'});
   ScrollReveal().reveal('.a',{delay:50 , origin: 'bottom'});
   ScrollReveal().reveal('.e',{delay:50 , origin: 'bottom'});
   ScrollReveal().reveal('.c',{delay:50 , origin: 'bottom'});
+  ScrollReveal().reveal('.p',{delay:50 , origin: 'bottom'});
+  ScrollReveal().reveal('.t',{delay:50 , origin: 'bottom'});
   
   ScrollReveal().reveal('.details-container',{delay:70 , origin: 'right'});
   ScrollReveal().reveal('.article-container article',{delay:80, origin: 'top',interval:100});
@@ -487,3 +538,4 @@
   
   </body>
 </html>
+k

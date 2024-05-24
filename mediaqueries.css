@@ -30,11 +30,6 @@
   .arrow {
     display: none;
   }
-  .gt {
-    margin-top: 100px;
-    font-size: 1.25rem;
-
-  }
   section,
   .section-container {
     height: fit-content;
@@ -50,25 +45,10 @@
   .about-containers {
     margin-top: 0;
   }
-  .cr{
-    text-align: center;
-    flex-basis: 100%;
-    font-size: 1.25rem;
-    width: 100%;
-    margin-top: 50000px;
-    padding-right: 500px;
-    text-align: center;
-    position:relative; left:-200px;
-    height: 83vh;
-    margin-right:6000px;
-  }
 }
 
 @media screen and (max-width: 600px) {
-  #contact{
-    height: 83vh;
-    margin-bottom: 0;
-  }
+  #contact,
   footer {
     height: 40vh;
   }
@@ -91,10 +71,6 @@
   .contact-info-container {
     margin: 0;
   }
-
-.contact-info-upper-container{
-  margin-top: 200px;
-}
   .contact-info-container p,
   .nav-links li a {
     font-size: 1rem;
@@ -106,14 +82,23 @@
     font-size: 1.5rem;
   }
   .nav-links {
-    margin-top: 600px;
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
   }
-
-  .section__text{
-    margin-top:100px;
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
   }
 
   .mv{
@@ -125,117 +110,49 @@
   .span{
     text-align: center;
     position:relative; left:-200px;
-    
-  width:100%;
-    margin-top: 600px;
+  }  
+
+
+  
+}
+@media (max-width: 600px) {
+  .contact-info-upper-container {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
   }
-  .section__pic-container {
-    width: 50px;;
-    height:50px;
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+  
+  .contact-info-container {
+    margin: 0 10px;
   }
-  .section__pic-container img{
-    height: 270px;
-    width: 200px;
+  .faded-image{
+    display: block; /* Ensures the image is treated as a block element */
+  margin: auto; /* Centers the image horizontally */
+  max-width: 80%; /* Ensures the image does not exceed the width of its container */
+  width: 60%; /* Reduces the size of the image to 50% of its container */
+  border-radius: 10px; /* Optional: adds rounded corners to the image */
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s ease-in-out;
+  
+  /* Adds a shadow with fading effect */
   }
-  .section__text__p3 {
+  
+  .A ,.PP,.B {
     flex-wrap: wrap;
-    font-size: 1.25rem;
-    margin-left: -400px;
-    text-align: center;
-    margin-top: 120px;
-
-  }
-
-  .section__text__p4{
-    flex-wrap: wrap;
-    font-size: 1.25rem;
-    margin-left: 70px;
-    text-align: center;
-    margin-top: 200px;
-  }
-  .gt {
-    margin-top: 100px;
-    font-size: 1.25rem;
-
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .title2 {
-    font-size: 1.5rem;
-    margin-left: 70px;
-  }
-  .text-container {
-    text-align: justify;
-  }
-  .gt2{
-    font-size: 1rem;
-    
-  }
-  .cr{
-    text-align: center;
-    flex-basis: 100%;
-    font-size: 1.25rem;
-    width: 800px;
-    margin-top: 500px;
-    padding-right: 500px;
-    text-align: center;
-    position:relative; left:-200px;
-    height: 83vh;
-    margin-right:60px;
-  }
-  .btns{
-    margin-left: 20px;
-  }
-  .cs{
-    width:400px;
-    height:50px;
-  }
-  nav-links-container{
-    margin-top: 100px;
-  }
-}
-/* xs */
-@media (min-width: 475px) {
-  .container {
-    max-width: 475px;
+    margin:auto;
+    width:100%;
   }
 }
 
-/* sm */
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-/* md */
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-/* lg */
 @media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
+  .contact-info-container {
+    margin: 0 20px;
   }
 }
+@media (min-width: 768px) {
 
-/* xl */
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-/* 2xl */
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
+  .faded-image{transition: transform 0.4s ease-in-out;}
+  .faded-image:hover {
+    transform: scale(1.1); /* Scales the image up by 20% when hovered */
   }
 }
