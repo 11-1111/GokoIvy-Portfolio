@@ -1,5 +1,21 @@
+/* Styles for small devices (portrait phones, less than 600px) */
 @media only screen and (max-width: 600px) {
 	/* Your mobile-specific styles here */
+  }
+
+
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
+	/* Your tablet-specific styles here */
+  }
+
+  /* Styles for small laptops and large tablets (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+	/* Your small laptop and large tablet-specific styles here */
+  }
+
+  /* Styles for desktops and laptops (1025px and up) */
+@media only screen and (min-width: 1025px) {
+	/* Your desktop-specific styles here */
   }
 body{
 	margin: 0;
