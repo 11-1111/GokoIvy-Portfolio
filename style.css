@@ -63,7 +63,7 @@ body::-webkit-scrollbar {
   font-weight: 200;
   font-style: normal;
 	font-size: 1rem;
-	color: #e3d5c3;
+color: #e3d5c3;
 	display: flex;
 	align-items: center;
 	cursor: pointer;

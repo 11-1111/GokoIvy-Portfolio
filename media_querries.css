@@ -3,6 +3,60 @@
 	.menu {
 		display : none;
 	}
+
+	#hero{
+		margin-bottom : 800px;
+	}
+	.overlap{
+		font-family: "Roboto Condensed", sans-serif;
+		width: 100%;
+		text-align: center;
+		color: #ffffff;
+		position: relative;
+		transform: translate(0%, 0%);
+		top: 5px;
+		left: 5%;
+		font-weight: 800;
+	  }
+	  .overlap span {
+		font-size: 22vw;
+		text-shadow: -0.08em 0.03em 0.12em rgba(0, 0, 0, 0.7);
+	  }
+	  .overlap span:not(:first-child) {
+		margin-left: -0.18em;
+	  }
+	  .overlap .v {
+		color: crimson;
+		
+	  }
+	  .who{
+		display: flex;
+		flex-direction: row;
+		justify-content: center !important;
+		
+		margin-top: 2% !important;
+	margin-left: 0px !important;
+	}
+	.who2{
+		
+		justify-content: center !important;
+		
+		margin-left: 0px !important;
+	
+	}
+
+	#hero  .name3 {
+	
+		font-size: 2rem !important;
+		animation: text_reveal_name 0.5s ease forwards;
+		animation-delay: 3s;
+		color:#e3d5c3;
+		margin-top: -7%;
+		margin-bottom: 20px;
+		align-items: center;
+		left: 20%;
+	}
+	
 }
 
 
