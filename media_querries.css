@@ -1,24 +1,6 @@
 
 @media only screen and (min-width: 1200px) {
-	/* header */
-	#header .hamburger {
-		display: none;
-	}
-	#header .nav-list ul {
-		position: initial;
-		display: block;
-		height: auto;
-		width: fit-content;
-		background-color: transparent;
-	}
-	#header .nav-list ul li {
-		display: inline-block;
-	}
-	#header .nav-list ul li a {
-		font-size: 1.8rem;
-	}
-	#header .nav-list ul a:after {
-		display: none;
+}
 body{
 	margin: 0;
   padding : 0;
@@ -101,7 +83,7 @@ body::-webkit-scrollbar {
     width: 60px; /* Width after clicking */
   }
 
-	}
+	
 .body{
 
 	width: 100%; /* Full width of the parent (body) */
