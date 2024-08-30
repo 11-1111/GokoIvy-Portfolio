@@ -1,10 +1,10 @@
 
-@media only screen and (max-width: 480px) and (max-width: 600px) { 
+@media only screen and (max-width: 480px) and (max-width:600px){
 	body{
 		margin: 0;
 	  padding : 10px;
 	  width: 100vw;
-	  min-width: 1800px;
+	  min-width: 1600px;
 	  overflow-x: hidden; 
 		 background-color: #000000;
 	}
@@ -19,7 +19,7 @@
 	
 	  .menu2{
 		width : 100%;
-		height : 3%;
+		height : 6%;
 		position: fixed;
 		z-index: 100;
 	    top: 0;
@@ -91,8 +91,8 @@
 
 	
  .body{
-	width: 100%; 
-   margin: auto;
+	width: 90%; 
+   margin-left: 7.5%;
    padding: 5px;
    box-sizing: border-box;
    background-color: #000000;
@@ -157,9 +157,8 @@
 	/* Hero Section */
 	#hero {
 	
-	width: 95%;
+	width: 100%;
 		margin-bottom: 200px ;
-	margin-left: 5%;
 	padding: 0;
 		display: flex;
 		position: relative;
@@ -213,7 +212,9 @@
 		
 	  width: 100%;
 	  margin-top: 10%;
-	  justify-content: flex-start;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
 	}
 	#hero h1 {
 		width: fit-content;
@@ -329,11 +330,11 @@
 	#servicesM  {
 		display: flex;
 		flex-direction: column;
-		width:100%;
-		height: 150vh;
+		width:95%;
+		height: 200vh;
 		background-color: #333;
 		border: 1px solid #333;
-		margin-top: 80px;
+		margin-top: 10%;
 		margin-bottom: 200px;
 		padding-top: 30px;
 		position: relative;
@@ -341,14 +342,14 @@
 	.servicesM {
 		display: flex;
 		flex-direction: row;
-		width:90%;
+		width:100%;
 	
 	}
 	.content-wrapper {
 		display: flex;
 		flex-direction: column;
 		width: 95%; /* Full width of the container */
-		margin-top: 0%; /* Adjust as needed */
+		margin-top: 5%; /* Adjust as needed */
 		margin-left: 10%;
 		margin-bottom: 20%;
 		
@@ -479,9 +480,10 @@
 	.pM {
 		font-family: "Inter", sans-serif;
 	  font-optical-sizing: auto;
-	  font-weight: 200;
+	  font-weight: 100;
 	  font-style: normal;
-	  font-size: 3rem;
+	  font-size: 18px;
+	  line-height: 1.5;
 	  font-variation-settings:
 		"slnt" 0;
 		color: #A9A9A9;
@@ -492,13 +494,13 @@
 	  width:80%;
 		flex-basis: 100%;	
 		height:50vh;
-		margin-left: 5%;
+		margin-left: 10%;
 		padding: 10px;
 		padding-left: 2px;
 		background-color:#171614;
 		transition : 1s;
 		border: 2px solid #2d2a27;
-		margin-top: 1%;
+		margin-top: 10%;
 	  }
 	
 	  
@@ -514,10 +516,10 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1px;
-		height:80vh;
+		height: 100vh;
 	 background-color: #000000;
 		flex-basis: 90%;
-		margin-left: 0%;
+		margin-left: 5%;
 		justify-content: center;
 		align-items: center;
 		width: 90%;
@@ -562,7 +564,13 @@
 	/* End Services Section */
 	
 	/* Projects section */
-	#projects .projects {
+	#projects {
+		display: none ;
+	}
+	.projects{
+		display: none;
+	}
+	#projectsM .projectsM {
 		
 		background-image: url(./img/projects.jpg);
 		 background-attachment: fixed;
@@ -626,7 +634,7 @@
 	#projects .projects-header h1 {
 		margin-bottom: 50px;
 	}
-	#projects .sub-projects{
+	#projectsM .sub-projectsM{
 		display:flex;
 		justify-content:space-between;
 		flex-direction:row;
@@ -701,7 +709,7 @@
 		margin-bottom: 2px;
 		color: whitesmoke;
 	}
-	#projects .projects-left{
+	#projectsM .projects-leftM{
 		flex-basis: 50%;
 		float:left;
 		
@@ -712,7 +720,7 @@
 		
 		
 	}
-	#projects .projects-right{
+	#projectsM .projects-rightM{
 			flex-basis: 50%;
 		float:right;
 		
