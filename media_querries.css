@@ -330,8 +330,8 @@
 	#servicesM  {
 		display: flex;
 		flex-direction: column;
-		width:95%;
-		height: 200vh;
+		width:96%;
+		height: 230vh;
 		background-color: #333;
 		border: 1px solid #333;
 		margin-top: 10%;
@@ -448,7 +448,7 @@
 	}
 	.cta {
 		
-		padding: 30px 60px;
+		padding: 60px;
 		color: white;
 		background-color: transparent;
 		border: 2px solid crimson;
@@ -469,7 +469,7 @@
 		font-optical-sizing: auto;
 		font-weight: 200;
 		font-style: normal;
-		font-size: 7rem;
+		font-size: 8rem;
 		color:whitesmoke;
 		letter-spacing: 0.2rem;
 		text-align: center;
@@ -482,7 +482,7 @@
 	  font-optical-sizing: auto;
 	  font-weight: 100;
 	  font-style: normal;
-	  font-size: 5rem;
+	  font-size: 5.3rem;
 	  line-height: 1.5;
 	  font-variation-settings:
 		"slnt" 0;
@@ -546,7 +546,7 @@
 		font-optical-sizing: auto;
 		font-weight: 100;
 		font-style: normal;
-		font-size: 4rem;
+		font-size: 4.8rem;
 		margin-bottom: 20%;
 		color:#A9A9A9;
 	}
@@ -580,7 +580,7 @@
 		background-size: cover;
 		display:flex;
 		flex-direction: column;
-		margin-bottom: 20px;
+		margin-bottom: 30%;
 		width:100%;
 		padding-left: 100px;
 		margin-top: 100px;
@@ -644,6 +644,7 @@
 		height: 140vh;
 		/* background-color: #A9A9A9; */
 	margin-top: 10px;
+	margin-bottom: 15%;
 	}
 	
 	.vertical-line{
@@ -676,14 +677,12 @@
 		display:flex;
 		justify-content: center;
 		align-items: center;
-		
-	
 	}
 	.education-container h1{
 		font-family: "Bebas Neue", sans-serif;
 		font-weight: 400;
 		font-style: normal;
-		font-size: 4rem;
+		font-size: 4.5rem;
 		margin-bottom: 2px;
 		color:antiquewhite;
 	}
@@ -699,7 +698,7 @@
 		font-family: "Bebas Neue", sans-serif;
 		font-weight: 700;
 		font-style: normal;
-		font-size: 3rem;
+		font-size: 4rem;
 		margin-bottom: 2px;
 		color: antiquewhite;
 	}
@@ -707,23 +706,21 @@
 		font-family: "Bebas Neue", sans-serif;
 		font-weight: 500;
 		font-style: normal;
-		font-size: 3rem;
+		font-size: 4rem;
 		margin-bottom: 2px;
 		color: whitesmoke;
 	}
 	#projectsM .projects-leftM{
-		flex-basis: 50%;
+		
 		width:100%;
-		margin-left:100px;
-		
-	
-		
+		margin-bottom: 15%;
 		
 	}
 	#projectsM .projects-rightM{
-			flex-basis: 50%;
+		
 		width:100%;
-		margin-right:2px;
+		margin-left: 70%;
+	
 		
 	}
 	
@@ -731,7 +728,7 @@
 	
 	.skills{
 		width: 100%;
-		max-width: 600px;
+		max-width: 900px;
 		padding: 0 20px;
 	  }
 	  
@@ -739,7 +736,7 @@
 		font-family: "Titillium Web", sans-serif;
 		font-weight: 200;
 		font-style: normal;
-		font-size: 12px;
+		font-size: 3rem;
 		
 		color: antiquewhite;
 		text-transform: uppercase;
@@ -747,9 +744,10 @@
 	  }
 	  
 	  .skill-bar{
-		height: 1px;
+		height: 5px;
 		background: #282828;
 		border-radius: 0px;
+		margin-bottom: 100px;
 	  }
 	  
 	  .skill-per{
@@ -796,7 +794,7 @@
 		font-size: 3.5rem;
 		font-weight: 200;
 		color:crimson;
-		margin-bottom: -25px;
+		margin-bottom: -80px;
 		text-transform: uppercase;
 		letter-spacing: 0.2rem;
 		
@@ -806,7 +804,7 @@
 		font-optical-sizing: auto;
 		font-weight: 200;
 		font-style: normal;
-		font-size: 7rem;
+		font-size: 8rem;
 		color:whitesmoke;
 		letter-spacing: 0.2rem;
 		margin-bottom: 10px;
