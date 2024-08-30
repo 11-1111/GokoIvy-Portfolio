@@ -129,6 +129,11 @@ margin-left: 10%;
     flex: 50%;
     max-width: 50%;
   }
+
+  .work-title-div{
+    display: none;
+  }
+
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
