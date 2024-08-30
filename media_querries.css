@@ -64,7 +64,7 @@
 	  }
 	  .link2 a:hover {
 		color: #008BA7; 
-		font-size: 3rem;
+		font-size: 3.6rem;
 	  }
 	  
 	.link2 a:hover .horizontal_line {
@@ -170,7 +170,7 @@
 	  
 	.icon {
 		cursor: pointer;
-		height: 3rem;
+		height: 4rem;
 	  }
 	
 	#hero .hero {
@@ -441,18 +441,18 @@
 		font-optical-sizing: auto;
 		font-weight: 200;
 		font-style: normal;
-		font-size: 4rem;
+		font-size: 5rem;
 		color:whitesmoke;
 		letter-spacing: 0.1rem;
 		
 	}
 	.cta {
 		
-		padding: 10px 30px;
+		padding: 30px 60px;
 		color: white;
 		background-color: transparent;
 		border: 2px solid crimson;
-		font-size: 2rem;
+		font-size: 10rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1rem;
 		margin-top: 20px;
@@ -469,7 +469,7 @@
 		font-optical-sizing: auto;
 		font-weight: 200;
 		font-style: normal;
-		font-size: 6rem;
+		font-size: 7rem;
 		color:whitesmoke;
 		letter-spacing: 0.2rem;
 		text-align: center;
@@ -482,7 +482,7 @@
 	  font-optical-sizing: auto;
 	  font-weight: 100;
 	  font-style: normal;
-	  font-size: 4rem;
+	  font-size: 5rem;
 	  line-height: 1.5;
 	  font-variation-settings:
 		"slnt" 0;
@@ -523,7 +523,8 @@
 		justify-content: center;
 		align-items: center;
 		width: 90%;
-		padding: 30px 30px;
+		padding: 30px;
+		padding-left: 30px;
 		border-style: solid;
 		/* border-color: #2d2a27; */
 		border-color: #e3d5c3;
@@ -543,9 +544,9 @@
 	.aa{
 		font-family: "Roboto Condensed", sans-serif;
 		font-optical-sizing: auto;
-		font-weight: 50;
+		font-weight: 100;
 		font-style: normal;
-		font-size: 1.5rem;
+		font-size: 4rem;
 		margin-bottom: 20%;
 		color:#A9A9A9;
 	}
@@ -607,7 +608,7 @@
 			font-weight: 800;
 		}
 		.overlap-projects span {
-			font-size: 16vw;
+			font-size: 60vw;
 			text-shadow: -0.08em 0.03em 0.12em rgba(0, 0, 0, 0.7);
 		}
 		.overlap-projects span:not(:first-child) {
@@ -636,14 +637,16 @@
 	}
 	#projectsM .sub-projectsM{
 		display:flex;
-		justify-content:space-between;
-		flex-direction:row;
-		width:100%;
-		
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width:90%;
+		height: 140vh;
+		/* background-color: #A9A9A9; */
 	margin-top: 10px;
 	}
 	
-	/* .vertical-line{
+	.vertical-line{
 		
 	
 		flex-basis: 5%;
@@ -652,7 +655,7 @@
 	  height: 40%;
 	  background-color: lightcoral;
 	
-	} */
+	}
 	.circle{
 		margin-top:25px;
 		margin-left:-2.5px;
@@ -667,13 +670,12 @@
 	}
 	.education{
 		flex-basis: 95%;
-		float:right;
-	
-	
 	}
+
 	.education-container{
 		display:flex;
-		margin-left:20px;
+		justify-content: center;
+		align-items: center;
 		
 	
 	}
@@ -681,7 +683,7 @@
 		font-family: "Bebas Neue", sans-serif;
 		font-weight: 400;
 		font-style: normal;
-		font-size: 1.5rem;
+		font-size: 4rem;
 		margin-bottom: 2px;
 		color:antiquewhite;
 	}
@@ -689,7 +691,7 @@
 		font-family: "Bebas Neue", sans-serif;
 		font-weight: 500;
 		font-style: normal;
-		font-size: 1.2rem;
+		font-size:7rem;
 		margin-bottom: 2px;
 		color: lightcoral
 	}
@@ -697,7 +699,7 @@
 		font-family: "Bebas Neue", sans-serif;
 		font-weight: 700;
 		font-style: normal;
-		font-size: 1.5rem;
+		font-size: 3rem;
 		margin-bottom: 2px;
 		color: antiquewhite;
 	}
@@ -705,15 +707,13 @@
 		font-family: "Bebas Neue", sans-serif;
 		font-weight: 500;
 		font-style: normal;
-		font-size: 1.25rem;
+		font-size: 3rem;
 		margin-bottom: 2px;
 		color: whitesmoke;
 	}
 	#projectsM .projects-leftM{
 		flex-basis: 50%;
-		float:left;
-		
-		width:45%;
+		width:100%;
 		margin-left:100px;
 		
 	
@@ -722,9 +722,7 @@
 	}
 	#projectsM .projects-rightM{
 			flex-basis: 50%;
-		float:right;
-		
-		width:50%;
+		width:100%;
 		margin-right:2px;
 		
 	}
@@ -795,10 +793,10 @@
 		}
 	  }
 	 .projects-title{
-		font-size: 1.5rem;
+		font-size: 3.5rem;
 		font-weight: 200;
 		color:crimson;
-		margin-bottom: -2px;
+		margin-bottom: -25px;
 		text-transform: uppercase;
 		letter-spacing: 0.2rem;
 		
@@ -808,7 +806,7 @@
 		font-optical-sizing: auto;
 		font-weight: 200;
 		font-style: normal;
-		font-size: 4.5rem;
+		font-size: 7rem;
 		color:whitesmoke;
 		letter-spacing: 0.2rem;
 		margin-bottom: 10px;
