@@ -971,7 +971,7 @@ margin-left: 10%;
 		height:100%;
 		position:relative;
 		margin-top:7%;
-		background-color: #171614;
+		
 	
 		display: flex;
 		flex-direction: row;
@@ -1048,7 +1048,7 @@ margin-left: 10%;
 		
 		width: 96%;
 		margin-left:-100px;
-		height: 200vh;
+		height:270vh;
 		padding-bottom: 50px;
 		background-color: #000000;
 		color: white;

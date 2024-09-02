@@ -187,24 +187,28 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   // script.js
-document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
 	const toggleButton = document.getElementById('toggleButton');
 	const floatingWidget = document.getElementById('floatingWidget');
 	const closeButton = document.getElementById('closeButton');
+	const mainContent = document.getElementById('mainContent'); // Add a wrapper around the main content if not already present
   
 	toggleButton.addEventListener('click', () => {
 	  if (floatingWidget.style.display === 'none' || floatingWidget.style.display === '') {
 		floatingWidget.style.display = 'block';
 		toggleButton.textContent = 'GET IN TOUCH';
+		mainContent.style.filter = 'blur(5px)'; // Apply blur effect to the background content
 	  } else {
 		floatingWidget.style.display = 'none';
 		toggleButton.textContent = 'GET IN TOUCH';
+		mainContent.style.filter = 'none'; // Remove blur effect
 	  }
 	});
   
 	closeButton.addEventListener('click', () => {
 	  floatingWidget.style.display = 'none';
 	  toggleButton.textContent = 'GET IN TOUCH';
+	  mainContent.style.filter = 'none'; // Remove blur effect
 	});
   });
   
