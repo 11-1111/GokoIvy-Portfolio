@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		  let valueContainer = progressBar.querySelector('.value-container');
 		  let progressEndValue = parseInt(progressBar.getAttribute('data-percentage'));
 		  let progressValue = 0;
-		  let speed = 20;
+		  let speed = 30;
   
 		  let progress = setInterval(() => {
 			progressValue++;
 			valueContainer.textContent = `${progressValue}%`;
 			progressBar.style.background = `conic-gradient(
-			  crimson ${progressValue * 3.6}deg,
+			  bisque ${progressValue * 3.6}deg,
 			  #424242 ${progressValue * 3.6}deg
 			)`;
 			if (progressValue >= progressEndValue) {
@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
   });
 
+  
 
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -98,9 +99,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (entry.isIntersecting) {
 		  const skillBar = entry.target;
 		  const percentage = skillBar.getAttribute('per');
-		  skillBar.style.width = percentage;
 		  
-		  // Optionally, stop observing the element
+		  // Ensure the width is reset before the animation
+		  skillBar.style.width = '0';
+		  
+		  // Use requestAnimationFrame to trigger reflow and ensure the transition works
+		  requestAnimationFrame(() => {
+			skillBar.style.transition = 'width 1.5s ease-in-out';
+			skillBar.style.backgroundColor = 'crimson';
+			skillBar.style.width = percentage;
+		  });
+  
+		  // Unobserve the progress bar after starting the animation
 		  observer.unobserve(skillBar);
 		}
 	  });
@@ -111,6 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	  observer.observe(skillBar);
 	});
   });
+  
+
   
 
 
