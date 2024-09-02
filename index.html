@@ -5,9 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- <link rel="stylesheet" href="style.css">-->
+
+  <!-- Load style.css for devices with a width of 768px and above (tablets and laptops) -->
+  <link rel="stylesheet" href="style.css" media="screen and (min-width: 768px)">
+
+  <!-- Load media_querries.css for devices with a width of less than 768px (mobile) -->
+  <link rel="stylesheet" href="media_querries.css" media="screen and (max-width: 767px)">
+  <link rel="stylesheet" href="media_querries2.css" media="screen and (max-width: 767px)">
+
   <link rel="stylesheet" href="style2.css">
-  <link rel="stylesheet" href="media_querries.css">
+
+  <!-- <link rel="stylesheet" href="media_querries.css"> -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -169,6 +178,7 @@
       <div class="service-left">
        
         <h1 class="sub "> You can Reach Me:</h1>
+        
         <ul class="ul">
           <li><a href="mailto:gokoivy2@gmail.com" class="aa">gokoivy2@gmail.com</a></li>
           <li><a href="tel:+25471-879-6756" class="aa">+25471-879-6756</a></li>
@@ -237,11 +247,18 @@
       <div class="service-leftM">
        
         <h1 class="sub "> You can Reach Me:</h1>
-        <ul class="ul">
-          <li><a href="mailto:gokoivy2@gmail.com" class="aa">gokoivy2@gmail.com</a></li>
-          <li><a href="tel:+25471-879-6756" class="aa">+25471-879-6756</a></li>
-          <li><a href="https://www.instagram.com/goko_dev/" class="aa">INSTAGRAM</a></li>
-          <li><a href="https://twitter.com/goko_dev"  class="aa">TWITTER</a></li>
+        <div class="u">
+        <div class="uleft">
+          <ul class="ul">
+            <li><a href="mailto:gokoivy2@gmail.com" class="aa">gokoivy2@gmail.com</a></li>
+            <li><a href="tel:+25471-879-6756" class="aa">+25471-879-6756</a></li>
+            <li><a href="https://www.instagram.com/goko_dev/" class="aa">INSTAGRAM</a></li>
+            <li><a href="https://twitter.com/goko_dev"  class="aa">TWITTER</a></li>
+            
+          </ul>
+          
+        </div>
+        <div class="uright">
           <div id="socials-container">
             <img
               src="./img/git.png"
@@ -256,7 +273,8 @@
               onclick="location.href='https://github.com/11-1111'"
             />
           </div>
-        </ul>
+        </div>
+      </div>
      </div>
       <div class="service-rightM">
         <h1 class="sub ">What i do</h1>
@@ -429,7 +447,7 @@
     <h1 class="projects-title">Qualification</h1>
     <h2 class="sub-projects-title">My education</h2>
     <div class="vertical-line"></div>
-    <div class="circle"></div>
+  
     <div class="education-container">
       
       <div class="education">
@@ -545,18 +563,18 @@
 <section id="sliderProjects" class="sliderProjects">
 
   <div class="work-title-divA">
-    <div class="overlap-workA">
-      <span>P</span>
-      <span>R</span>
-      <span>O</span>
-      <span>J</span>
-      <span>E</span>
-      <span>C</span>
-      <span>T</span>
-      <span>S</span>
-     
-    </div>
+  <div class="overlap-workA">
+    <span>P</span>
+    <span>R</span>
+    <span>O</span>
+    <span>J</span>
+    <span>E</span>
+    <span>C</span>
+    <span>T</span>
+    <span>S</span>
   </div>
+</div>
+
 
 <h1 class="projects-title">RECENT PROJECTS</h1>
 <h2 class="sub-projects-title">My Work</h2>
