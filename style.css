@@ -7,6 +7,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
 
+/* testing */
+
+#parallax {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-position: 50% 50%;
+  }
+
+ #parallax h1 {
+	position: absolute;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-family: "Arial";
+	text-transform: uppercase;
+	opacity: .2;
+	font-size: 70px;
+  }
+
+/* testing end  */
 * {
 	padding: 0;
 	margin: 0;
@@ -474,16 +499,19 @@ margin-bottom: 20px;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    margin-top: 20px;
-    transition: transform 250ms ease, background-color 250ms ease, color 250ms ease;
+    margin-top: 5px;
+    transition: transform 750ms ease, background-color 250ms ease, color 250ms ease;
+    will-change: transform;
 }
 
 .cta:hover {
     color: white;
     background-color: crimson;
-    transform: scale(1.2);
+	transition: transform 425ms;
+    transform: scale(1.2) translateY(-10px); /* Combine scale and translateY */
     opacity: 1; /* Ensure opacity is 1 on hover */
 }
+
 
 .sub{
 	font-family: "Roboto Condensed", sans-serif;
