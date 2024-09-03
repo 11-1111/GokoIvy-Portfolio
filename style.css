@@ -23,7 +23,9 @@ body{
 body::-webkit-scrollbar {
 	display: none;
   }
-
+.menu2 {
+	display: none;
+}
   .menu{
 	position: fixed;
 	z-index: 100;
@@ -358,6 +360,9 @@ margin-left: auto;
 /* End Hero Section */
 
 /* Services Section */
+#servicesM {
+	display: none;
+}
 #services  {
 	display: flex;
 	flex-direction: column;
@@ -462,22 +467,24 @@ margin-bottom: 20px;
 	
 }
 .cta {
-	
-	padding: 10px 30px;
-	color: white;
-	background-color: transparent;
-	border: 2px solid crimson;
-	font-size: 2rem;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	margin-top: 20px;
-	transition: 0.3s ease;
-	transition-property: background-color, color;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 20px;
+    transition: transform 250ms ease, background-color 250ms ease, color 250ms ease;
 }
+
 .cta:hover {
-	color: white;
-	background-color: crimson;
+    color: white;
+    background-color: crimson;
+    transform: scale(1.2);
+    opacity: 1; /* Ensure opacity is 1 on hover */
 }
+
 .sub{
 	font-family: "Roboto Condensed", sans-serif;
 	font-optical-sizing: auto;
@@ -586,6 +593,9 @@ margin-bottom: 20px;
 /* End Services Section */
 
 /* Projects section */
+#projectsM {
+	display: none;
+}
 #projects .projects {
 	
 	background-image: url(./img/projects.jpg);

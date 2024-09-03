@@ -458,12 +458,15 @@
 		margin-top: 20px;
 		margin-bottom: 80px;
 		margin-left: 12%;
+        transition: transform 250ms, opacity 400ms;
 		transition: 0.3s ease;
 		transition-property: background-color, color;
 	}
-	.cta:hover {
+	.cta:focus {
 		color: white;
 		background-color: crimson;
+        transform: scale(1.2);
+  opacity: 0;
 	}
 	.sub{
 		font-family: "Roboto Condensed", sans-serif;

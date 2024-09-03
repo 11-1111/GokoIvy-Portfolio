@@ -458,12 +458,13 @@
 		margin-top: 20px;
 		margin-bottom: 80px;
 		margin-left: 12%;
-		transition: 0.3s ease;
-		transition-property: background-color, color;
+		transition: transform 250ms ease, background-color 250ms ease, color 250ms ease;
 	}
 	.cta:hover {
 		color: white;
 		background-color: crimson;
+		transform: scale(1.2);
+		opacity: 1; /* Ensure opacity is 1 on hover */
 	}
 	.sub{
 		font-family: "Roboto Condensed", sans-serif;
