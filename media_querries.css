@@ -460,7 +460,7 @@
 		margin-left: 12%;
 		transition: transform 250ms ease, background-color 250ms ease, color 250ms ease;
 	}
-	.cta:hover {
+	.cta:focus {
 		color: white;
 		background-color: crimson;
 		transform: scale(1.2);
