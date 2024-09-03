@@ -671,7 +671,7 @@ margin-bottom: 20px;
 	padding-left: 20px;
 	background-color:#171614;
 	transition : 1s;
-	border: 2px solid #2d2a27;
+	border: 2px solid #2d2a27;;
 	margin-top: 5%;
 	animation: rotate 1s linear infinite;
 	animation-play-state: paused;
