@@ -110,11 +110,19 @@
     
       
       <div class="hero-line-container" id="parallax">
+
+        <div>Escape</div> 
+<div> 
+  <span>into amazing experiences</span>
+</div>
         
         <div class="h">
-        <h1 class="name1">HELLO, I'M GOKO<span></span></h1>
-      </div>
 
+        <div class="name1">HELLO ,</div>
+        <div class="name1">
+        I'M GOKO<span></span></h1>
+      </div>
+</div>
         <div class="who">
       
 
@@ -159,7 +167,7 @@
 
       
       <div class="h2">
-        <p class="section__text__p3">Nice to meet you, I <span class="auto-type"></span></p> 
+        <!-- <p class="section__text__p3"> I<span></span> <span class="auto-type"></span></p>  -->
         <!-- <a href="#projects" type="button" class="cta">CV</a> -->
        </div> 
 
@@ -167,11 +175,12 @@
 
         <div class="services-title-div">
           <div class="overlap-about">
-            <span>A</span>
-            <span>B</span>
-            <span>0</span>
-            <span>U</span>
-            <span>T</span>
+            <span class="abt">A</span>
+            <span class="abt">B</span>
+            <span  class="abt">0</span>
+            <span class="abt">U</span>
+            <span class="abt">T</span>
+            
            
           </div>
      </div>
@@ -203,7 +212,14 @@
      </div>
       <div class="service-right">
         <h1 class="sub ">What i do</h1>
-        <p class="p"> developing efficient, scalable, and maintainable software solutions. With a solid foundation in computer science and years of hands-on experience in full-stack development</p>
+        <div class="pp">
+          <p class="p">Create</p>
+          <p class="p"><span> Amazing Experiences</span></p>
+       
+        </div>
+
+        <p class="p">efficient, scalable, and maintainable software solutions. With a solid foundation in computer science and years of hands-on experience in full-stack development</p>
+       
         <a href="#projects" type="button" class="cta">CV</a>
       </div>
     </div>
@@ -304,11 +320,12 @@
     <div class="projects container">
       <div class="projects-title-div">
         <div class="overlap-projects">
-            <span>S</span>
-            <span>K</span>
-            <span>I</span>
-            <span>L</span>
-            <span>L</span>
+            <span class="abt">S</span>
+            <span class="abt">K</span>
+            <span class="abt">I</span>
+            <span class="abt">L</span>
+            <span class="abt">L</span>
+           
            
           </div>
       </div>
@@ -742,12 +759,15 @@
 
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    <script> var typed= new Typed(".auto-type",{strings:[" am a full stack webDev."," love coding "," create exceptional experiences."," thrive on challenges."]
+    <script> 
+    var typed= new Typed(".auto-type",{strings:[" am a full stack webDev."," love coding "," create exceptional experiences."," thrive on challenges."]
     ,typeSpeed: 50,
     backSpeed: 10,
     loop: true
   
-  })</script>
+  })
+
+  </script>
   <script> ScrollReveal({
     reset: true,
     distance: '60px',
@@ -765,14 +785,14 @@
  
   //projects
   ScrollReveal().reveal('.services-title',{delay:50 , origin: 'bottom'});
-  ScrollReveal().reveal('.number1',{delay:50 , origin: 'bottom'});
+  ScrollReveal().reveal('.abt',{delay:150 , origin: 'right'});
  
   //worl
   ScrollReveal().reveal('.services-title',{delay:50 , origin: 'bottom'});
   ScrollReveal().reveal('.number1',{delay:50 , origin: 'bottom'});
  
-  ScrollReveal().reveal('.service-left',{delay:100 , origin: 'right'});
-  ScrollReveal().reveal('.service-right',{delay:70 , origin: 'left'});
+  ScrollReveal().reveal('.service-left',{delay:20 , origin: 'right'});
+  ScrollReveal().reveal('.service-right',{delay:50 , origin: 'left'});
 
   ScrollReveal().reveal('.projects-left',{delay:20 , origin: 'right'});
   ScrollReveal().reveal('.projects-right',{delay:20 , origin: 'left'});

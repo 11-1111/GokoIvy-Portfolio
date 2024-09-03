@@ -16,22 +16,23 @@
 	background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
 	background-repeat: no-repeat;
 	background-position: center;
+	 background-attachment: fixed;
 	background-position: 50% 50%;
   }
 
- #parallax h1 {
+ #parallax .overlap {
 	position: absolute;
 	top: 47%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: #fff;
+	color: #c4b6a3; 
 	font-family: "Arial";
 	text-transform: uppercase;
 	opacity: .2;
-	font-size: 70px;
+	font-size: 40px;
   }
 
-/* testing end  */
+/* testing end */
 * {
 	padding: 0;
 	margin: 0;
@@ -220,7 +221,7 @@ background-color: #000000;
 	flex-direction:column;
 	width:90%;
 }
-.overlap{
+ #parallax .overlap {
 	font-family: "Roboto Condensed", sans-serif;
 	width: 100%;
 	text-align: center;
@@ -231,14 +232,14 @@ background-color: #000000;
 	left: 65%;
 	font-weight: 800;
   }
-  .overlap span {
+  #parallax .overlap span {
 	font-size: 22vw;
 	text-shadow: -0.08em 0.03em 0.12em rgba(0, 0, 0, 0.7);
   }
-  .overlap span:not(:first-child) {
+  #parallax .overlap span:not(:first-child) {
 	margin-left: -0.18em;
   }
-  .overlap .v {
+  #parallax .overlap .v {
 	color: crimson;
 	
   }
@@ -259,8 +260,15 @@ background-color: #000000;
   width: 100%;
   margin-top: 0%;
   justify-content: flex-start;
+  display: flex;
+  flex-direction: row ;
+
+  overflow:hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
 }
-#hero h1 {
+#hero .name1 {
 	width: fit-content;
 	position: relative;
 	color: transparent;
@@ -268,6 +276,55 @@ background-color: #000000;
 	animation-delay: 1s;
 	
 }
+.h div {
+	display:inline-block;
+	overflow:hidden;
+	white-space:nowrap;
+  }
+  
+  .h div:first-of-type {    /* For increasing performance 
+						 ID/Class should've been used. 
+						 For a small demo 
+						 it's okaish for now */
+	animation: showup 7s infinite;
+  }
+  
+  .h div:last-of-type {
+	width:0px;
+	animation: reveal 7s infinite;
+  }
+  
+  .h div:last-of-type span {
+	margin-left:-355px;
+	animation: slidein 7s infinite;
+  }
+  
+  @keyframes showup {
+	  0% {opacity:0;}
+	  20% {opacity:1;}
+	  80% {opacity:1;}
+	  100% {opacity:0;}
+  }
+  
+  @keyframes slidein {
+	  0% { margin-left:-800px; }
+	  20% { margin-left:-800px; }
+	  35% { margin-left:0px; }
+	  100% { margin-left:0px; }
+  }
+  
+  @keyframes reveal {
+	  0% {opacity:0;width:0px;}
+	  20% {opacity:1;width:0px;}
+	  30% {width:355px;}
+	  80% {opacity:1;}
+	  100% {opacity:0;width:355px;}
+  }
+  
+
+
+
+
 
 #hero .name1{
 	font-family: "Roboto Condensed", sans-serif;
@@ -399,6 +456,12 @@ margin-left: auto;
 	margin-bottom: 200px;
 	padding-top: 30px;
 	position: relative;
+/* 
+	background-image: url('img/projects.jpg');
+	overflow: hidden;
+	background-size: cover;
+	background-attachment: fixed;
+	transition: background-position 0.1s ease-out; Smooth transition */
 }
 .services {
 	display: flex;
@@ -476,17 +539,21 @@ margin-bottom: 20px;
 	margin-top: 200px;
   }
   .auto-type {
-	font-size: 1.75rem;
-	color: crimson;
+	font-size: 3.75rem;
+	color: #c4b6a3;
 	letter-spacing: 0.1rem;
 	animation: auto-type 1s steps(30, end) infinite;
+	font-family: "Roboto Condensed", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 200;
+	font-style: normal;
 }
 .section__text__p3{
 	font-family: "Roboto Condensed", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 200;
 	font-style: normal;
-	font-size: 1.2rem;
+	font-size: 2rem;
 	color:whitesmoke;
 	letter-spacing: 0.1rem;
 	
@@ -534,7 +601,16 @@ margin-bottom: 20px;
 	margin-bottom: 20%;
 	
   }
-.p {
+  .pp{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-left: 40%;
+	height: 5vh;
+	
+  }
+  .p {
 	font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
@@ -544,6 +620,51 @@ margin-bottom: 20px;
     "slnt" 0;
 	color: #A9A9A9;
 }
+
+.pp p {
+	color: #ffffff;
+	display:inline-block;
+	overflow:hidden;
+	white-space:nowrap;
+  }
+  
+  .pp p:first-of-type {    
+	animation: showup 7s infinite;
+	margin-right: 5px;
+  }
+  
+  .pp p:last-of-type {
+	width:0px;
+	animation: reveal 7s infinite;
+  }
+  
+  .pp p:last-of-type span {
+	margin-left:-355px;
+	animation: slidein 7s infinite;
+  }
+  
+  @keyframes showup {
+	  0% {opacity:0;}
+	  20% {opacity:1;}
+	  80% {opacity:1;}
+	  100% {opacity:0;}
+  }
+  
+  @keyframes slidein {
+	  0% { margin-left:-800px; }
+	  20% { margin-left:-800px; }
+	  35% { margin-left:0px; }
+	  100% { margin-left:0px; }
+  }
+  
+  @keyframes reveal {
+	  0% {opacity:0;width:0px;}
+	  20% {opacity:1;width:0px;}
+	  30% {width:355px;}
+	  80% {opacity:1;}
+	  100% {opacity:0;width:355px;}
+  }
+
 
 /* Style for the left div */
 .service-left {
@@ -572,7 +693,7 @@ margin-bottom: 20px;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	height:45vh;
+	height:65vh;
  background-color: #000000;
 	flex-basis: 50%;
 	margin-left: -20%;
