@@ -456,12 +456,7 @@ margin-left: auto;
 	margin-bottom: 200px;
 	padding-top: 30px;
 	position: relative;
-/* 
-	background-image: url('img/projects.jpg');
-	overflow: hidden;
-	background-size: cover;
-	background-attachment: fixed;
-	transition: background-position 0.1s ease-out; Smooth transition */
+	
 }
 .services {
 	display: flex;
@@ -678,7 +673,21 @@ margin-bottom: 20px;
 	transition : 1s;
 	border: 2px solid #2d2a27;
 	margin-top: 5%;
+	animation: rotate 1s linear infinite;
+	animation-play-state: paused;
+	animation-delay: calc(var(--scroll) * -1s);
+  
+	animation-iteration-count: 1;
+	animation-fill-mode: both;
   }
+  @keyframes rotate {
+    from {
+        transform: rotate(-90deg); /* Start from 0 degrees */
+    }
+    to {
+        transform: rotate(396.5deg); /* Rotate to 90 degrees */
+    }
+}
 
   
   
@@ -707,6 +716,7 @@ margin-bottom: 20px;
 	border-color: #e3d5c3;
     border-radius: 0px;
 	border-width: 0.5px;
+	
 }
   .ul{
 	padding: 0 5px;
