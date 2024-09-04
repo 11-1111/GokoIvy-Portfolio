@@ -202,7 +202,7 @@ background-color: #000000;
   }
 
 #socials-container {
-	justify-content: flex-end
+	justify-content: flex-start;
 	margin-top: 1rem;
 	gap: 4rem;
   }
