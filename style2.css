@@ -2,11 +2,10 @@
 .sliderProjects{ 
   width: 100%;
   /* height: 50vh; */
-  margin-top: 250px;
   margin-bottom: 500px;
   align-items: center;
   justify-content: center;
-    
+
  }
 
  .work-title-div{
@@ -38,12 +37,7 @@
   margin-top: -0.18em;
 }
 .sliderProjects .projects-title, .sliderProjects .sub-projects-title{
-margin-left: 10%;
 
-}
-
-.sliderProjects .sub-projects-title{
-  margin-bottom: 100px;
 }
 .slider-container{
   margin-left: 15%;
@@ -66,6 +60,7 @@ margin-left: 10%;
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+  margin-top: 20%;
 }
 
 /* Create four equal columns that sits next to each other */

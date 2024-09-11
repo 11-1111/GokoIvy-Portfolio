@@ -1,30 +1,159 @@
-/*const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
-const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
-const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
-const header = document.querySelector('.header.container');*
+//MAD ANIMATIONS 
 
-hamburger.addEventListener('click', () => {
-	hamburger.classList.toggle('active');
-	mobile_menu.classList.toggle('active');
-});
-
-document.addEventListener('scroll', () => {
-	var scroll_position = window.scrollY;
-	if (scroll_position > 250) {
-		header.style.backgroundColor = '#1B1212';
-		
-	} else {
-		header.style.backgroundColor = 'transparent';
+const exp = gsap.timeline({
+	scrollTrigger: {
+	  trigger: ".hero",
+	  start: "top 1%",
+	  end: "+=5000",
+	  scrub: true,
+	  markers: false,
+	  pin: ".hero"
 	}
+  });
+  
+  exp.to(".name3", {
+	"--progress1": 1,
+	ease: "none",
+	smoothOrigin: true
+  });
+  exp.from(
+	".extraBox",
+	{
+	  scaleX: 1,
+	  ease: "none"
+	},
+	"-=0.4"
+  );
+
+// stagger
+
+	// Register the ScrollTrigger plugin
+	gsap.registerPlugin(ScrollTrigger);
+  
+	// Create a ScrollTrigger instance
+	ScrollTrigger.create({
+	  trigger: ".name3", // The element that triggers the animation
+	  start: "top 80%", // When the top of the trigger element reaches 80% from the top of the viewport
+	  end: "bottom top", // When the bottom of the trigger element reaches the top of the viewport
+	  onEnter: () => {
+		gsap.from(".name3", {
+		  opacity: 0,
+		  y: 50,
+		  duration: 1,
+		  stagger: 0.2,
+		  ease: "power2.out"
+		});
+	  }
+	});
+  
+//stagger 2 
+document.addEventListener('DOMContentLoaded', () => {
+	// Register the ScrollTrigger plugin
+	gsap.registerPlugin(ScrollTrigger);
+  
+	// Create a ScrollTrigger instance
+	ScrollTrigger.create({
+	  trigger: ".overlap-projects", // Element to trigger the animation
+	  start: "top 80%", // Start when the top of the trigger element is 80% from the top of the viewport
+	  end: "bottom top", // End when the bottom of the trigger element is at the top of the viewport
+	  onEnter: () => {
+		gsap.from(".overlap-projects span", {
+		  opacity: 0,
+		  y: 50,
+		  duration: 0.1,
+		  stagger: 0.08,
+		  ease: "power2.out",
+		  pin: ".projects"
+		});
+	  },
+	  onLeaveBack: () => {
+		// Optional: Define what happens when scrolling back past the element
+		gsap.to(".overlap-projects span", {
+		  opacity: 0,
+		  y: 50,
+		  duration: 0.2,
+		  stagger: 0.08,
+		  ease: "power2.out"
+		});
+	  },
+	  markers: true // Optional: show markers for debugging
+	});
+  });
+  
+
+
+
+
+
+  //PARALLAX FOR SECTIONS 
+  // Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// Apply parallax effect to the elements
+gsap.utils.toArray('.parallax-item').forEach(item => {
+  gsap.fromTo(item, 
+    { y: 100 }, // Start position (e.g., below the normal position)
+    { 
+      y: -100, // End position (moves up as you scroll)
+      scrollTrigger: {
+        trigger: item, // The element that triggers the effect
+        start: "top 80%", // Start when the element comes into view
+        end: "bottom top", // End when the element leaves the view
+        scrub: true, // Smoothly animate the parallax effect based on scroll
+		markers: false,
+      }
+    }
+  );
 });
 
-menu_item.forEach((item) => {
-	item.addEventListener('click', () => {
-		hamburger.classList.toggle('active');
-		mobile_menu.classList.toggle('active');
-	});
-});
-*/
+ // Register the ScrollTrigger plugin
+ gsap.registerPlugin(ScrollTrigger);
+
+ // Apply parallax effect to the elements
+ gsap.utils.toArray('.parallax-item2').forEach(item => {
+   gsap.fromTo(item, 
+	 { y: 100 }, // Start position (e.g., below the normal position)
+	 { 
+	   y: -100, // End position (moves up as you scroll)
+	   scrollTrigger: {
+		 trigger: item, // The element that triggers the effect
+		 start: "top 110%", // Start when the element comes into view
+		 end: "bottom top", // End when the element leaves the view
+		 scrub: true, // Smoothly animate the parallax effect based on scroll
+		 markers: false,
+	   }
+	 }
+   );
+ });
+
+
+   
+
+ ///pause 
+//  gsap.registerPlugin(ScrollTrigger);
+
+// gsap.to("#services", {
+//   scrollTrigger: {
+//     trigger: "#services",
+//     start: "top 0%",  // When the section hits the middle of the viewport
+//     end: "+=500",         // Total scroll distance
+//     pin: true,            // Pins the section in place
+//     scrub: true,          // Smooth scrubbing as you scroll
+//     onEnter: (self) => {
+//       // Disable scroll for 3 seconds
+//       self.scroll = false;
+//       setTimeout(() => {
+//         self.scroll = true; // Enable scroll again
+//       }, 1000); // Delay of 3 seconds
+//     },
+//     markers: false // Remove markers after debugging
+//   }
+// });
+
+
+
+
+
 document.addEventListener('scroll', () => {
 	var scroll_position = window.scrollY;
 	if (scroll_position > 250) {
