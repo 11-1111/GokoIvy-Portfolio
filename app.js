@@ -1,9 +1,120 @@
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+	// When the page is fully loaded, start the loader timeout
+	window.onload = function() {
+	  // Keep the loader visible for 5 seconds after the page has loaded
+	  setTimeout(function() {
+		// Slide the loader down by setting its transform property
+		const gifSection = document.getElementById('gif-section');
+		gifSection.style.transform = 'translateY(100%)'; // Slide down out of view
+  
+		// After the sliding animation, reveal the main content
+		setTimeout(function() {
+		  const content = document.querySelector('.body');
+		  content.classList.add('fade-in');
+		}, 1000); // Wait for the slide transition to finish (1 second)
+	  }, 2000); // 5000 milliseconds = 5 seconds delay
+	};
+  });
+  
+  
+  //typography
+  const quotes = document.querySelectorAll(".overlap");
+const quotes2 = document.querySelectorAll(".name3");
+
+function setupSplits() {
+  $(document).ready(function(){
+    $(".split-line").wrap('<div class="split-parent"></div>');
+  });
+  
+  
+  quotes.forEach(quote => {
+
+    quote.split = new SplitText(quote, { 
+      type: "lines,words,chars",
+      linesClass: "split-line"
+    });
+
+    // Set up the anim
+    quote.anim = gsap.from(quote.split.lines, {
+      scrollTrigger: {
+        trigger: quote,
+        toggleActions: "restart pause resume reverse",
+        start: "50% 60%",
+        markers: true,
+      },
+      duration: 0.6, 
+      ease: "circ.out", 
+      yPercent: 100, 
+      stagger: 0.2,
+    });
+  });
+
+
+
+quotes2.forEach(quote2 => {
+
+    quote2.split = new SplitText(quote2, { 
+      type: "lines"
+    });
+
+    // Set up the anim
+    quote2.anim = gsap.from(quote2.split.lines, {
+      scrollTrigger: {
+        trigger: quote2,
+        toggleActions: "restart pause resume reverse",
+        start: "50% 60%",
+        markers: true,
+      },
+      duration: 0.6,
+      autoAlpha: 0,
+      ease: "circ.out", 
+      yPercent: 100, 
+      stagger: 0.2,
+    });
+  });
+}
+
+// ScrollTrigger.addEventListener("refresh", setupSplits);
+setupSplits();
+
+
+
+
+
+
+
+
+
+
+
+
 //MAD ANIMATIONS 
+
+///line to zoom in 
+document.addEventListener("DOMContentLoaded", function () {
+	gsap.timeline()
+	  .to(".line", {
+		width: "100%",       // Animate the line to full width
+		duration: 1,         // Time it takes for the line to extend
+		ease: "power2.out"   // Easing function
+	  })
+	  .to(".hero", {
+		opacity: 1,          // Fade the section in
+		scale: 1,            // Zoom to full size
+		duration: 1,         // Time for the zoom animation
+		ease: "power2.out"   // Easing function
+	  }, "-=0.5");           // Start zoom animation slightly before the line finishes
+  });
+
+  //zoom name 
 
 const exp = gsap.timeline({
 	scrollTrigger: {
 	  trigger: ".hero",
-	  start: "top 1%",
+	  start: "top 0%",
 	  end: "+=5000",
 	  scrub: true,
 	  markers: false,
@@ -11,7 +122,7 @@ const exp = gsap.timeline({
 	}
   });
   
-  exp.to(".name3", {
+  exp.to(".name", {
 	"--progress1": 1,
 	ease: "none",
 	smoothOrigin: true
@@ -117,7 +228,7 @@ gsap.utils.toArray('.parallax-item').forEach(item => {
 	   y: -100, // End position (moves up as you scroll)
 	   scrollTrigger: {
 		 trigger: item, // The element that triggers the effect
-		 start: "top 110%", // Start when the element comes into view
+		 start: "top 60%", // Start when the element comes into view
 		 end: "bottom top", // End when the element leaves the view
 		 scrub: true, // Smoothly animate the parallax effect based on scroll
 		 markers: false,
@@ -125,6 +236,26 @@ gsap.utils.toArray('.parallax-item').forEach(item => {
 	 }
    );
  });
+
+
+//  gsap.registerPlugin(ScrollTrigger);
+
+//  // Apply parallax effect to the elements
+//  gsap.utils.toArray('.parallax-item3').forEach(item => {
+//    gsap.fromTo(item, 
+// 	 { y: 100 }, // Start position (e.g., below the normal position)
+// 	 { 
+// 	   y: -50, // End position (moves up as you scroll)
+// 	   scrollTrigger: {
+// 		 trigger: item, // The element that triggers the effect
+// 		 start: "top 80%", // Start when the element comes into view
+// 		 end: "bottom top", // End when the element leaves the view
+// 		 scrub: true, // Smoothly animate the parallax effect based on scroll
+// 		 markers: false,
+// 	   }
+// 	 }
+//    );
+//  });
 
 
    
@@ -151,6 +282,74 @@ gsap.utils.toArray('.parallax-item').forEach(item => {
 // });
 
 
+
+
+
+//section zoom in
+document.addEventListener("DOMContentLoaded", function () {
+	gsap.registerPlugin(ScrollTrigger);
+  
+	gsap.fromTo(
+	  ".services", 
+	  { scale: 0.5 }, // Initial scale (shrink when not in view)
+	  {
+		scale: 1.05, // Full scale (zoom when in view)
+		ease: "power1.out",
+		scrollTrigger: {
+		  trigger: ".services",
+		  start: "top 80%", // When the top of the section is 80% from the top of the viewport
+		  end: "bottom 20%", // When the bottom of the section reaches 20% from the top
+		  scrub: true, // Smooth transition during scroll
+		  toggleActions: "play reverse play reverse", // Revert to initial state when scrolling out
+		},
+	  }
+	);
+  });
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+	gsap.registerPlugin(ScrollTrigger);
+  
+	gsap.fromTo(
+	  ".projects", 
+	  { scale: 0.5 }, // Initial scale (shrink when not in view)
+	  {
+		scale: 1.05, // Full scale (zoom when in view)
+		ease: "power1.out",
+		scrollTrigger: {
+		  trigger: ".projects",
+		  start: "top 80%", // When the top of the section is 80% from the top of the viewport
+		  end: "bottom 20%", // When the bottom of the section reaches 20% from the top
+		  scrub: true, // Smooth transition during scroll
+		  toggleActions: "play reverse play reverse", // Revert to initial state when scrolling out
+		},
+	  }
+	);
+  });
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+	gsap.registerPlugin(ScrollTrigger);
+  
+	gsap.fromTo(
+	  ".sliderProjects", 
+	  { scale: 0.5 }, // Initial scale (shrink when not in view)
+	  {
+		scale: 1.05, // Full scale (zoom when in view)
+		ease: "power1.out",
+		scrollTrigger: {
+		  trigger: ".sliderProjects",
+		  start: "top 80%", // When the top of the section is 80% from the top of the viewport
+		  end: "bottom 20%", // When the bottom of the section reaches 20% from the top
+		  scrub: true, // Smooth transition during scroll
+		  toggleActions: "play reverse play reverse", // Revert to initial state when scrolling out
+		},
+	  }
+	);
+  });
+  
 
 
 
