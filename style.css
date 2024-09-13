@@ -266,7 +266,7 @@ transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; */
 	width: 100%;
 	text-align: center;
 	color: #ffffff;
-	position: absolute;
+	position: absolute
 	transform: translate(-50%, -50%);
 	top: 42%;
 	left:52%;
