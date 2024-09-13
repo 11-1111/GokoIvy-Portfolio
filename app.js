@@ -20,65 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   
-  //typography
-  const quotes = document.querySelectorAll(".overlap");
-const quotes2 = document.querySelectorAll(".name3");
-
-function setupSplits() {
-  $(document).ready(function(){
-    $(".split-line").wrap('<div class="split-parent"></div>');
-  });
   
-  
-  quotes.forEach(quote => {
-
-    quote.split = new SplitText(quote, { 
-      type: "lines,words,chars",
-      linesClass: "split-line"
-    });
-
-    // Set up the anim
-    quote.anim = gsap.from(quote.split.lines, {
-      scrollTrigger: {
-        trigger: quote,
-        toggleActions: "restart pause resume reverse",
-        start: "50% 60%",
-        markers: true,
-      },
-      duration: 0.6, 
-      ease: "circ.out", 
-      yPercent: 100, 
-      stagger: 0.2,
-    });
-  });
-
-
-
-quotes2.forEach(quote2 => {
-
-    quote2.split = new SplitText(quote2, { 
-      type: "lines"
-    });
-
-    // Set up the anim
-    quote2.anim = gsap.from(quote2.split.lines, {
-      scrollTrigger: {
-        trigger: quote2,
-        toggleActions: "restart pause resume reverse",
-        start: "50% 60%",
-        markers: true,
-      },
-      duration: 0.6,
-      autoAlpha: 0,
-      ease: "circ.out", 
-      yPercent: 100, 
-      stagger: 0.2,
-    });
-  });
-}
-
-// ScrollTrigger.addEventListener("refresh", setupSplits);
-setupSplits();
 
 
 
@@ -95,6 +37,8 @@ setupSplits();
 
 ///line to zoom in 
 document.addEventListener("DOMContentLoaded", function () {
+	gsap.registerPlugin(ScrollTrigger);
+
 	gsap.timeline()
 	  .to(".line", {
 		width: "100%",       // Animate the line to full width
@@ -110,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //zoom name 
+  gsap.registerPlugin(ScrollTrigger);
 
 const exp = gsap.timeline({
 	scrollTrigger: {

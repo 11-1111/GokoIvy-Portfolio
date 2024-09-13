@@ -161,19 +161,7 @@ color: #e3d5c3;
   
 
   
-/* Fade-in effect for the main content */
-/* .fade-in {
-	visibility: visible;
-	opacity: 0;
-	animation: fadeIn 1s forwards;
-  }
-  
-  @keyframes fadeIn {
-	to {
-	  opacity: 1;
-	}
-  }
- */
+
 
 .body{
 	
@@ -224,30 +212,7 @@ p {
 	letter-spacing: 0.2rem;
 	text-align: center;
 }
-.section-title span {
-	color: crimson;
-}
 
-
-.brand h1 {
-	font-size: 2.5rem;
-	text-transform: uppercase;
-	color:#A9A9A9;
-	
-}
-.brand h1 span {
-	color: crimson;
-}
-
-.line {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 0;
-	height: 4px;
-	background-color: black;
-	transform: translateY(-50%);
-  }
 
 /* Hero Section */
 #hero {
@@ -301,7 +266,7 @@ transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; */
 	width: 100%;
 	text-align: center;
 	color: #ffffff;
-	position: absolute;
+	position: absolute
 	transform: translate(-50%, -50%);
 	top: 42%;
 	left:52%;
@@ -324,17 +289,7 @@ transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; */
     transform-origin: center; */
 	
   }
-/* 
-#hero .hero-line {
-	
-	flex-basis: 0.05%;
-	float:right;
-  width: 0.5px;
 
-  background-color: #44403a;
-  margin-left: 5%;
-  
-} */
 
 #hero .h{
 	
@@ -406,20 +361,7 @@ margin-left: auto;
 	padding:0 10% 0 13%;
 
 }
-#hero .name2 {
-	font-family: "Amatic SC", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-	font-size: 18rem;
-	animation-delay: 2s;
-	color:#e3d5c3;
-	margin-left: 50px;
-}
 
-.name2, h1:last-of-type {
-	display: inline-block; /* Make headers inline */
-	margin: 0; /* Remove default margins */
-  }
 #hero  .name3 {
 	
 	overflow: hidden;
@@ -439,12 +381,7 @@ margin-left: auto;
 }
 
   
-  /* Style for the 'finished' state */
-  #hero h1.finished {
-	animation: changeColor 0.5s forwards;
-  }
 
-  
 
 /* End Hero Section */
 
