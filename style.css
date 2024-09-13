@@ -274,7 +274,7 @@ transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; */
 	overflow: hidden;
   }
   #parallax .overlap span{
-	font-size: 34vw;
+	font-size: 30vw;
 	text-shadow: -0.08em 0.03em 0.12em rgba(0, 0, 0, 0.7);
   }
   #parallax .overlap span:not(:first-child)  {
