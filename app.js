@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		  ease: "power2.out"
 		});
 	  },
-	  markers: true // Optional: show markers for debugging
+	  markers: false // Optional: show markers for debugging
 	});
   });
   
@@ -182,25 +182,26 @@ gsap.utils.toArray('.parallax-item').forEach(item => {
    );
  });
 
+ 
 
-//  gsap.registerPlugin(ScrollTrigger);
+ gsap.registerPlugin(ScrollTrigger);
 
-//  // Apply parallax effect to the elements
-//  gsap.utils.toArray('.parallax-item3').forEach(item => {
-//    gsap.fromTo(item, 
-// 	 { y: 100 }, // Start position (e.g., below the normal position)
-// 	 { 
-// 	   y: -50, // End position (moves up as you scroll)
-// 	   scrollTrigger: {
-// 		 trigger: item, // The element that triggers the effect
-// 		 start: "top 80%", // Start when the element comes into view
-// 		 end: "bottom top", // End when the element leaves the view
-// 		 scrub: true, // Smoothly animate the parallax effect based on scroll
-// 		 markers: false,
-// 	   }
-// 	 }
-//    );
-//  });
+ // Apply parallax effect to the elements
+ gsap.utils.toArray('.parallax-item3').forEach(item => {
+   gsap.fromTo(item, 
+	 { y: 100 }, // Start position (e.g., below the normal position)
+	 { 
+	   y: -300, // End position (moves up as you scroll)
+	   scrollTrigger: {
+		 trigger: item, // The element that triggers the effect
+		 start: "top 80%", // Start when the element comes into view
+		 end: "bottom top", // End when the element leaves the view
+		 scrub: true, // Smoothly animate the parallax effect based on scroll
+		 markers: false,
+	   }
+	 }
+   );
+ });
 
 
    
@@ -231,6 +232,27 @@ gsap.utils.toArray('.parallax-item').forEach(item => {
 
 
 //section zoom in
+document.addEventListener("DOMContentLoaded", function () {
+	gsap.registerPlugin(ScrollTrigger);
+  
+	gsap.fromTo(
+	  ".containerS",
+	  { scale: 0.5 }, // Initial scale (shrink when not in view)
+	  {
+		scale: 1.05, // Full scale (zoom when in view)
+		ease: "power1.out",
+		scrollTrigger: {
+		  trigger: ".containerS",
+		  start: "top 80%", // When the top of the section is 80% from the top of the viewport
+		  end: "bottom 20%", // When the bottom of the section reaches 20% from the top
+		  scrub: true, // Smooth transition during scroll
+		  toggleActions: "play reverse play reverse", // Revert to initial state when scrolling out
+		},
+	  }
+	);
+  });
+
+
 document.addEventListener("DOMContentLoaded", function () {
 	gsap.registerPlugin(ScrollTrigger);
   
