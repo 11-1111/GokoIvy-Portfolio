@@ -170,10 +170,10 @@ gsap.utils.toArray('.parallax-item').forEach(item => {
    gsap.fromTo(item, 
 	 { y: 100 }, // Start position (e.g., below the normal position)
 	 { 
-	   y: -100, // End position (moves up as you scroll)
+	   y: -500, // End position (moves up as you scroll)
 	   scrollTrigger: {
 		 trigger: item, // The element that triggers the effect
-		 start: "top 60%", // Start when the element comes into view
+		 start: "top 100%", // Start when the element comes into view
 		 end: "bottom top", // End when the element leaves the view
 		 scrub: true, // Smoothly animate the parallax effect based on scroll
 		 markers: false,
