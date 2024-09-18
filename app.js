@@ -50,7 +50,7 @@ $(document).ready(function() {
 		}
 		
 		function value() {
-			$('.nbr:nth-child(' + select() + ')').html('' + random() + '');
+			$('.nbr:nth-child(' + select() + ')').html( random() );
 			$('.nbr:nth-child(' + select() + ')').attr('data-number', $data);
 			$data++;
 			
