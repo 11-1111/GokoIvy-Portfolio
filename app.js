@@ -1,6 +1,9 @@
 
 
 
+
+
+//loader
 document.addEventListener("DOMContentLoaded", () => {
 	// When the page is fully loaded, start the loader timeout
 	window.onload = function() {
@@ -21,6 +24,49 @@ document.addEventListener("DOMContentLoaded", () => {
   
   
   
+//shuffle 
+$(document).ready(function() {
+	// Delay for 10 seconds (10000 milliseconds) before starting the randomizer
+	setTimeout(function() {
+		const $random = $('.nbr');
+		const $timer = 30;
+		let $it;
+		let $data = 0;
+		let index;
+		let change;
+		let letters = ['p', 'a', 't', 't', 'e', 'r', 'n'];
+		
+		$random.each(function() {
+			change = Math.round(Math.random() * 100);
+			$(this).attr('data-change', change);
+		});
+		
+		function random() {
+			return Math.round(Math.random() * 9);
+		}
+		
+		function select() {
+			return Math.round(Math.random() * $random.length + 1);
+		}
+		
+		function value() {
+			$('.nbr:nth-child(' + select() + ')').html('' + random() + '');
+			$('.nbr:nth-child(' + select() + ')').attr('data-number', $data);
+			$data++;
+			
+			$random.each(function() {
+				if (parseInt($(this).attr('data-number')) > parseInt($(this).attr('data-change'))) {
+					index = $('.ltr').index(this);
+					$(this).html(letters[index]);
+					$(this).removeClass('nbr');
+				}
+			});
+		}
+		
+		$it = setInterval(value, $timer);
+	}, 10000); // 10-second delay
+});
+
 
 
 
@@ -36,51 +82,44 @@ document.addEventListener("DOMContentLoaded", () => {
 //MAD ANIMATIONS 
 
 ///line to zoom in 
-document.addEventListener("DOMContentLoaded", function () {
-	gsap.registerPlugin(ScrollTrigger);
-
-	gsap.timeline()
-	  .to(".line", {
-		width: "100%",       // Animate the line to full width
-		duration: 1,         // Time it takes for the line to extend
-		ease: "power2.out"   // Easing function
-	  })
-	  .to(".hero", {
-		opacity: 1,          // Fade the section in
-		scale: 1,            // Zoom to full size
-		duration: 1,         // Time for the zoom animation
-		ease: "power2.out"   // Easing function
-	  }, "-=0.5");           // Start zoom animation slightly before the line finishes
-  });
-
-  //zoom name 
-  gsap.registerPlugin(ScrollTrigger);
-
-const exp = gsap.timeline({
-	scrollTrigger: {
-	  trigger: ".hero",
-	  start: "top 0%",
-	  end: "+=5000",
-	  scrub: true,
-	  markers: false,
-	  pin: ".hero"
+$(document).ready(function() {
+	const $random = $('.nbr');
+	const $timer = 40;
+	let $it;
+	let $data = 0;
+	let index;
+	let change;
+	let letters = ['c', 'r', 'e', 'a', 't', 'i', 'v', 'e' ];
+	
+	$random.each(function() {
+		change = Math.round(Math.random() * 100);
+		$(this).attr('data-change', change);
+	})
+	
+	function random() {
+		return Math.round(Math.random() * 9);
 	}
-  });
-  
-  exp.to(".name", {
-	"--progress1": 1,
-	ease: "none",
-	smoothOrigin: true
-  });
-  exp.from(
-	".extraBox",
-	{
-	  scaleX: 1,
-	  ease: "none"
-	},
-	"-=0.4"
-  );
-
+	
+	function select() {
+		return Math.round(Math.random() * $random.length + 1);
+	}
+	
+	function value() {
+		$('.nbr:nth-child(' + select() + ')').html('' + random() + '');
+		$('.nbr:nth-child(' + select() + ')').attr('data-number', $data);
+		$data++;
+		
+		$random.each(function() {
+			if (parseInt($(this).attr('data-number')) > parseInt($(this).attr('data-change'))) {
+				index = $('.ltr').index(this);
+				$(this).html(letters[index]);
+				$(this).removeClass('nbr');
+			}
+		})
+	}
+	
+	$it = setInterval(value, $timer);
+})
 // stagger
 
 	// Register the ScrollTrigger plugin

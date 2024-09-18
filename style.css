@@ -6,9 +6,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
+.content {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 10rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	position: relative;
+	
+	width: 100%;
+	top: 50%;
+	transform: translate(50%, 50%);
+	text-align: flex-end;
+	color : white
+}
 
-
-
+.content span {
+	width: 30px;
+	display: inline-block;
+}
 
 
 :root {
@@ -342,12 +357,15 @@ transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; */
 
 
 .who{
+	width: 90%;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 	gap: -5px;
-	margin-top: 32%;
+	margin-top: 2%;
+	margin-bottom: 10%;
 margin-left: auto;
+/* background-color: #aaaaaa; */
 }
 .who2{
 	display: flex;
