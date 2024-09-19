@@ -166,7 +166,7 @@
 </div>
 
         <div class="who">
-          <div class="content">
+          <!-- <div class="content">
             <div class="random">
               <span class="nbr ltr">0</span>
               <span class="nbr ltr">0</span>
@@ -178,7 +178,7 @@
               <span class="nbr ltr">0</span>
             </div>
           </div>
-       
+        -->
 
           <!-- <div class="overlap parallax-item2">
             <span class="c" >C</span>
@@ -193,11 +193,32 @@
           </div> -->
                       
         </div>
-        <div class="who2">
+        <!-- <div class="who2">
    
         <h1 class="name3">DEVELOPER<span></span></h1>
-       
+        <h1 class="name3">DEVELOPER<span></span></h1>
+        <h1 class="name3">DEVELOPER<span></span></h1>
+        </div> -->
+        <div class="container">
+          <h1 class="header">
+            23F * 734 <br />&nbsp;&nbsp; (8) &.09 <br />0x2_ U3
+          </h1>
+    
+          <div class="titles">
+            <div class="title title-1"><h1>Make</h1></div>
+            <div class="title title-2"><h1>A</h1></div>
+            <div class="title title-3"><h1>Difference</h1></div>
+          </div>
+          <ul class="blocks">
+            <li class="block-1 block"></li>
+            <li class="block-2 block"></li>
+            <li class="block-3 block"></li>
+            <li class="block-4 block"></li>
+            <li class="block-5 block"></li>
+            <li class="block-6 block"></li>
+          </ul>
         </div>
+    
     </div> 
   </section>
 
@@ -887,7 +908,67 @@
   </script>
   
 
+  <script>
+    TweenMax.staggerFrom(
+      ".titles > div",
+      0.8,
+      {
+        x: "-60",
+        ease: Power3.easeInOut,
+        opacity: "0",
+      },
+      2
+    );
 
+    TweenMax.staggerTo(
+      ".titles > div",
+      0.8,
+      {
+        x: "60",
+        ease: Power3.easeInOut,
+        delay: 1.2,
+        opacity: "0",
+      },
+      2
+    );
+    TweenMax.staggerFrom(
+      "li",
+      3,
+      {
+        x: "-1600",
+        delay: 4.2,
+        ease: Expo.easeInOut,
+      },
+      0.16
+    );
+
+    TweenMax.staggerTo(
+      "li",
+      2.6,
+      {
+        x: "1600",
+        delay: 6.8,
+        ease: Expo.easeInOut,
+      },
+      0.2
+    );
+
+    var textWrapper = document.querySelector(".header");
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    );
+
+    anime.timeline().add({
+      targets: ".header .letter",
+      opacity: [0, 1],
+      translateY: [80, 0],
+      translateZ: 0,
+      easing: "easeOutExpo",
+      duration: 2000,
+      delay: (el, i) => 8400 + 40 * i,
+    });
+  </script>
  
 
 
