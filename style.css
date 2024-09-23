@@ -6,7 +6,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
-
+.cursor {
+	--cursor-size: 40px;
+	position: fixed;
+	height: var(--circle-size);
+	width: var(--circle-size);
+	border: 1px solid white;
+	border-radius: 100%;
+	top: calc(var(--circle-size) / 2 * -1);
+	left: calc(var(--circle-size) / 2 * -1);
+	pointer-events: none;
+  }
   
 
 .content {
@@ -304,21 +314,75 @@ transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; */
 	font-weight: 800;
 	overflow: hidden;
   }
-  #parallax .overlap span{
-	font-size: 25vw;
-	text-shadow: -0.08em 0.03em 0.12em rgba(0, 0, 0, 0.7);
-  }
-  #parallax .overlap span:not(:first-child)  {
-	margin-left: -0.18em;
-  }
-  #parallax .overlap .v {
-	color: crimson;
-	
-  }
-  #parallax .overlap .c {
-	/* transform: scale(calc(var(--progress1) * 1000.5)) !important;
-    transform-origin: center; */
-  }
+  #parallax .overlap span {
+    font-size: 25vw;
+    text-shadow: -0.08em 0.03em 0.12em rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transform: translate(-300px, 0) scale(0);
+    animation: animate 1s forwards;
+    display: inline-block;
+    animation-delay: 3s; /* Add a 5-second delay */
+}
+
+#parallax .overlap span:not(:first-child)  {
+    margin-left: -0.18em;
+}
+#parallax .overlap span:nth-of-type(1) {
+    animation-delay: calc(2s + 0.1s); /* 5 seconds global delay + specific delay */
+}
+#parallax .overlap span:nth-of-type(2) {
+    animation-delay: calc(2s + 0.1s); /* 5 seconds global delay + specific delay */
+}
+
+#parallax .overlap span:nth-of-type(3) {
+    animation-delay: calc(2s + 0.2s);
+}
+
+#parallax .overlap span:nth-of-type(4) {
+    animation-delay: calc(2s + 0.3s);
+}
+
+#parallax .overlap span:nth-of-type(5) {
+    animation-delay: calc(2s + 0.4s);
+}
+
+#parallax .overlap span:nth-of-type(6) {
+    animation-delay: calc(2s + 0.5s);
+}
+
+#parallax .overlap span:nth-of-type(7) {
+    animation-delay: calc(2s + 0.6s);
+}
+
+#parallax .overlap span:nth-of-type(8) {
+    animation-delay: calc(2s + 0.7s);
+}
+
+@keyframes animate {
+    /* 60% {
+        transform: translate(20px, 0) scale(1);
+        color: #fff;
+    }
+    80% {
+        transform: translate(20px, 0) scale(1);
+        color: #fff;
+    }
+    99% {
+        transform: translate(0) scale(1.2);
+        color: #282828;
+    } */
+    100% {
+        transform: translate(0) scale(1);
+        color: #fff;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
 
 #hero .h{
 	
@@ -373,10 +437,11 @@ margin-left: auto;
 .who2{
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	gap: -5px;
-	margin-left: 0px;
-	padding:0 10% 0 13%;
+	margin-left: 10%;
+	
+	width: 100%;
 
 }
 
@@ -388,69 +453,15 @@ margin-left: auto;
 	font-optical-sizing: auto;
 	font-weight: 200;
 	font-style: normal;
-	font-size: 22rem;
+	font-size: 23rem;
 	color:#e3d5c3;
-	margin-top: -10%;
+	margin-top: 10%;
 	margin-bottom: 20px;
-	align-items: center;
-	animation: glitch 1s linear infinite;
+	align-items: right;
+	/* animation: glitch 1s linear infinite; */
 	
 }
 
-@keyframes glitch{
-	2%,64%{
-	  transform: translate(2px,0) skew(0deg);
-	}
-	4%,60%{
-	  transform: translate(-2px,0) skew(0deg);
-	}
-	62%{
-	  transform: translate(0,0) skew(5deg); 
-	}
-  }
-  
-  .name3:before,
-  .name3:after{
-	content: attr(title);
-	position: absolute;
-	left: 0;
-  }
-  
-  .name3:before{
-	animation: glitchTop 1s linear infinite;
-	clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  }
-  
-  @keyframes glitchTop{
-	2%,64%{
-	  transform: translate(2px,-2px);
-	}
-	4%,60%{
-	  transform: translate(-2px,2px);
-	}
-	62%{
-	  transform: translate(13px,-1px) skew(-13deg); 
-	}
-  }
-  
-  .name3:after{
-	animation: glitchBotom 1.5s linear infinite;
-	clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-	-webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  }
-  
-  @keyframes glitchBotom{
-	2%,64%{
-	  transform: translate(-2px,0);
-	}
-	4%,60%{
-	  transform: translate(-2px,0);
-	}
-	62%{
-	  transform: translate(-22px,5px) skew(21deg); 
-	}
-  }
 
 
 /* End Hero Section */
@@ -467,9 +478,10 @@ margin-left: auto;
 	align-items: center;
 	width: 20%;
 	height: 60%;
+	
 	margin-top: 20%;
-	margin-bottom: 10px;
-	padding:10px 200px 10px 200px;
+	margin-bottom: 100px;
+	padding:100px 200px 10px 200px;
 	position: relative;
 	margin-left: 30%;
   }
