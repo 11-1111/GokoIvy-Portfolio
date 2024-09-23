@@ -7,17 +7,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
 .cursor {
-	--cursor-size: 40px;
+	--cursor-size: 1px; /* Size of the cursor */
 	position: fixed;
-	height: var(--circle-size);
-	width: var(--circle-size);
-	border: 1px solid white;
-	border-radius: 100%;
-	top: calc(var(--circle-size) / 2 * -1);
-	left: calc(var(--circle-size) / 2 * -1);
+	height: var(--cursor-size);
+	width: var(--cursor-size);
+	border: 5px solid crimson; /* Create the ring with a red border */
+	border-radius: 100%; /* Make it a circle */
+	top: calc(var(--cursor-size) / 2 * -1);
+	left: calc(var(--cursor-size) / 2 * -1);
 	pointer-events: none;
-  }
-  
+	background-color: transparent; /* No background color to make it a ring */
+	transition: border 0.2s ease, transform 0.2s ease; /* Optional transition for smoothness */
+	z-index: 1000;
+}
+
+
 
 .content {
 	font-family: 'Orbitron', sans-serif;
