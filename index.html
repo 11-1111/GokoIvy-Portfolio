@@ -65,6 +65,7 @@
 
 
   <div class="cursor"></div>
+  
 
 
 <!-- 
@@ -124,7 +125,7 @@
    
 
 
-    <section id="gif-section" class=" panel section gif-section">
+    <section id="gif-section" class=" panel  gif-section">
       <img src="img/loader.gif" alt="Playing GIF" class="gif">
     </section>
 
@@ -212,15 +213,7 @@
 
   <!-- End Hero Section  -->
 
-  <div class="containerS ">
-    Full
-    <div class="stack" style="--stacks: 3;">
-      <span style="--index: 0;">STACK</span>
-      <span style="--index: 1;">STACK</span>
-      <span style="--index: 2;">STACK</span>
-    </div>
-    <span class="right">Capable</span>
-  </div>
+  
 
 
 
@@ -374,8 +367,7 @@
 
 
 
-
-
+  
 
 
 
@@ -394,6 +386,7 @@
             <span class="abt">I</span>
             <span class="abt">L</span>
             <span class="abt">L</span>
+            
            
            
           </div>
@@ -653,6 +646,89 @@
 </section>
 <!--Mobile projects Section-->
 
+<!-- 
+<section id ="offers" class="offers">
+<div class="containerS ">
+  Full
+  <div class="stack" style="--stacks: 3;">
+    <span style="--index: 0;">STACK</span>
+    <span style="--index: 1;">STACK</span>
+    <span style="--index: 2;">STACK</span>
+  </div>
+  <span class="right">Capable</span>
+</div>
+</section> -->
+
+<div class="offer-title-div">
+  <div class="overlap-offer">
+    <span class="abt">S</span>
+    <span class="abt">E</span>
+    <span class="abt">R</span>
+    <span class="abt">V</span>
+    <span class="abt">I</span>
+    <span class="abt">C</span>
+    <span class="abt">E</span>
+    <span class="abt">S</span>
+     
+    </div>
+</div>
+<div class="bg"></div>
+  
+<div class="section">
+  <div class="section-img">
+    <div class="section-img-inner faded-image" style="background-image: url(img/app-dev.jfif);"></div>
+  </div>
+  <div class="section-body">
+    <div class="section-text">
+      <h2 class="sub-projects-title">WEB APP DEVELOPMENT</h2>
+      <p>I Design and develop robust web applications using the Django framework and React.js, ensuring responsive and user-friendly interfaces tailored to client needs.</p>
+    </div>
+  </div> 
+</div>  
+
+<div class="section">
+  <div class="section-img">
+    <div class="section-img-inner faded-image" style="background-image: url(img/download\ \(34\).jfif);"></div>
+  </div>
+  <div class="section-body">
+    <div class="section-text">
+      <h2 class="sub-projects-title">Database Management and Optimization</h2>
+      <p>I Provide database design, implementation, and optimization services using MySQL, ensuring data integrity, security, and efficient query performance for applications.</p>
+      
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-img">
+    <div class="section-img-inner faded-image" style="background-image: url(img/API.jfif);"></div>
+  </div>
+  <div class="section-body">
+    <div class="section-text">
+      <h2 class="sub-projects-title">API Integration and Development</h2>
+      <p>I Develop and integrate APIs to enhance the functionality of web applications, ensuring seamless communication between different software systems and services.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-img">
+    <div class="section-img-inner faded-image" style="background-image: url(img/doc.jfif);"></div>
+
+  </div>
+  <div class="section-body">
+    <div class="section-text">
+      <h2 class="sub-projects-title">Technical Documentation and Support</h2>
+      <p>I Create documentation for software projects, including user manuals and maintenance guides, to facilitate easier updates and support for future development teams.</p> 
+    </div>
+  </div>
+</div>
+
+
+<!--end of offers section-->
+
+
+
 
 
 <section id="sliderProjects" class="sliderProjects">
@@ -780,10 +856,15 @@
 </div>
 </div>
      <div id="floatingWidget" class="widget hidden">
-<div class="closeButtonDiv">
+<!-- <div class="closeButtonDiv">
 <button id="closeButton">x</button>
-</div>
+</div> -->
       <div class="c-title-div">
+        <button class="item-1">
+          <span class="inner">
+            <span class="label">Close</span>
+          </span>
+        </button>
         <h1 class="c-title">Lets Collaborate</h1>
       </div>
      
@@ -794,6 +875,7 @@
 <li><a href="mailto:gokoivy2@gmail.com" class="aa2">gokoivy2@gmail.com</a></li>
 <li><a href="tel:+25471-879-6756" class="aa2">+25471-879-6756</a></li>
 <ul>
+  <button type="submit" class="submit">SEND</button>
 </div>
 
 <div class="c-right">
@@ -801,7 +883,7 @@
 <input type="text" placeholder="Enter your name" name="name" autocomplete="off" required>
 <input type="email" placeholder="Enter your email" name="email" autocomplete="off"  required>
 <textarea placeholder="Want to know more?Drop a Line" name="message"  rows="5" cols="30" autocomplete="off"  required></textarea>
-<button type="submit" class="submit">SEND</button>
+
 </div>
       
 </div>
@@ -871,6 +953,8 @@
  
   ScrollReveal().reveal('.x',{delay:50 , origin: 'bottom'});
   ScrollReveal().reveal('.p',{delay:50 , origin: 'bottom'});
+  ScrollReveal().reveal('.section-text',{delay:400 , origin: 'top'});
+ 
  
  
   //projects
@@ -896,69 +980,28 @@
   
   </script>
   
-
-  <!-- <script>
-    TweenMax.staggerFrom(
-      ".titles > div",
-      0.8,
-      {
-        x: "-60",
-        ease: Power3.easeInOut,
-        opacity: "0",
-      },
-      2
-    );
-
-    TweenMax.staggerTo(
-      ".titles > div",
-      0.8,
-      {
-        x: "60",
-        ease: Power3.easeInOut,
-        delay: 1.2,
-        opacity: "0",
-      },
-      2
-    );
-    TweenMax.staggerFrom(
-      "li",
-      3,
-      {
-        x: "-1600",
-        delay: 4.2,
-        ease: Expo.easeInOut,
-      },
-      0.16
-    );
-
-    TweenMax.staggerTo(
-      "li",
-      2.6,
-      {
-        x: "1600",
-        delay: 6.8,
-        ease: Expo.easeInOut,
-      },
-      0.2
-    );
-
-    var textWrapper = document.querySelector(".header");
-    textWrapper.innerHTML = textWrapper.textContent.replace(
-      /\S/g,
-      "<span class='letter'>$&</span>"
-    );
-
-    anime.timeline().add({
-      targets: ".header .letter",
-      opacity: [0, 1],
-      translateY: [80, 0],
-      translateZ: 0,
-      easing: "easeOutExpo",
-      duration: 2000,
-      delay: (el, i) => 8400 + 40 * i,
-    });
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script>
+      $(window).scroll(function(){
+        let $window = $(window),
+            $section = $('.section');
+        let scroll = $window.scrollTop() + ($window.height() / 3);
+        
+        $section.each(function(){ 
+          if($(this).position().top <= scroll && $(this).position().top + $(this).height() > scroll){
+            $('.section').removeClass('active').addClass('inactive'); // Set all sections inactive
+            $(this).removeClass('inactive').addClass('active'); // Set current section active
+          } else {
+            // Remove active class if the section is not in view
+            $(this).removeClass('active').addClass('inactive'); // Ensure images are hidden when not in view
+          }
+        });
+      }).scroll();
   </script>
-  -->
+
+
+
+
 
 
 </body>

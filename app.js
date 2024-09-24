@@ -115,7 +115,7 @@ lastSpan.addEventListener('animationend', function() {
     // After the animation ends, wait 1 second
     setTimeout(() => {
         // Smoothly scroll to the 'services' section
-        document.querySelector('.containerS').scrollIntoView({
+        document.querySelector('#services').scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
@@ -174,6 +174,7 @@ $(document).ready(function() {
 
 
 
+// offers section 
 
 
 
@@ -380,13 +381,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	gsap.registerPlugin(ScrollTrigger);
   
 	gsap.fromTo(
-	  ".containerS",
+	  ".overlap-offer",
 	  { scale: 0.5 }, // Initial scale (shrink when not in view)
 	  {
 		scale: 1.05, // Full scale (zoom when in view)
 		ease: "power1.out",
 		scrollTrigger: {
-		  trigger: ".containerS",
+		  trigger: ".overlap-offer",
 		  start: "top 80%", // When the top of the section is 80% from the top of the viewport
 		  end: "bottom 20%", // When the bottom of the section reaches 20% from the top
 		  scrub: true, // Smooth transition during scroll
