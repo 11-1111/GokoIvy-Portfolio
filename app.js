@@ -2,7 +2,7 @@
 console.clear();
 
 // Select the circle element
-const cursorElement = document.querySelector('.cursor');
+const cursorElement = document.querySelector('.cursor-follow');
 
 // Create objects to track mouse position and custom cursor position
 const mouse = { x: 0, y: 0 }; // Track current mouse position
@@ -95,38 +95,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   
-  function disableScroll() {
-    document.body.style.overflow = 'hidden'; // Disable scrolling
-}
+//   function disableScroll() {
+//     document.body.style.overflow = 'hidden'; // Disable scrolling
+// }
 
-function enableScroll() {
-    document.body.style.overflow = ''; // Re-enable scrolling
-}
+// function enableScroll() {
+//     document.body.style.overflow = ''; // Re-enable scrolling
+// }
 
-// Select all span elements
-const spans = document.querySelectorAll('#parallax .overlap span');
+// // Select all span elements
+// const spans = document.querySelectorAll('#parallax .overlap span');
 
-// Listen for the animation end event on the last span element
-const lastSpan = spans[spans.length - 1];
+// // Listen for the animation end event on the last span element
+// const lastSpan = spans[spans.length - 1];
 
-disableScroll(); // Disable scrolling at the start of the animation
+// disableScroll(); // Disable scrolling at the start of the animation
 
-lastSpan.addEventListener('animationend', function() {
-    // After the animation ends, wait 1 second
-    setTimeout(() => {
-        // Smoothly scroll to the 'services' section
-        document.querySelector('#services').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+// lastSpan.addEventListener('animationend', function() {
+//     // After the animation ends, wait 1 second
+//     setTimeout(() => {
+//         // Smoothly scroll to the 'services' section
+//         document.querySelector('#services').scrollIntoView({
+//             behavior: 'smooth',
+//             block: 'start'
+//         });
 
-        // Re-enable scrolling after the auto-scroll completes (adjust timeout based on scroll duration)
-        setTimeout(() => {
-            enableScroll();
-        }, 1500); // Adjust this duration if your scroll takes longer than 1.5 seconds
+//         // Re-enable scrolling after the auto-scroll completes (adjust timeout based on scroll duration)
+//         setTimeout(() => {
+//             enableScroll();
+//         }, 1500); // Adjust this duration if your scroll takes longer than 1.5 seconds
 
-    }, 1000); // 1 second delay before scrolling
-});
+//     }, 1000); // 1 second delay before scrolling
+// });
 
   
 //shuffle 
@@ -351,26 +351,7 @@ gsap.utils.toArray('.parallax-item').forEach(item => {
 
    
 
- ///pause 
-//  gsap.registerPlugin(ScrollTrigger);
 
-// gsap.to("#services", {
-//   scrollTrigger: {
-//     trigger: "#services",
-//     start: "top 0%",  // When the section hits the middle of the viewport
-//     end: "+=500",         // Total scroll distance
-//     pin: true,            // Pins the section in place
-//     scrub: true,          // Smooth scrubbing as you scroll
-//     onEnter: (self) => {
-//       // Disable scroll for 3 seconds
-//       self.scroll = false;
-//       setTimeout(() => {
-//         self.scroll = true; // Enable scroll again
-//       }, 1000); // Delay of 3 seconds
-//     },
-//     markers: false // Remove markers after debugging
-//   }
-// });
 
 
 
@@ -657,24 +638,24 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded', () => {
 	const toggleButton = document.getElementById('toggleButton');
 	const floatingWidget = document.getElementById('floatingWidget');
-	const closeButton = document.getElementById('closeButton');
+	const closeButton = document.getElementById('item-1');
 	const mainContent = document.getElementById('mainContent'); // Add a wrapper around the main content if not already present
   
 	toggleButton.addEventListener('click', () => {
 	  if (floatingWidget.style.display === 'none' || floatingWidget.style.display === '') {
 		floatingWidget.style.display = 'block';
-		toggleButton.textContent = 'GET IN TOUCH';
+		toggleButton.textContent = '';
 		mainContent.style.filter = 'blur(5px)'; // Apply blur effect to the background content
 	  } else {
 		floatingWidget.style.display = 'none';
-		toggleButton.textContent = 'GET IN TOUCH';
+		toggleButton.textContent = '';
 		mainContent.style.filter = 'none'; // Remove blur effect
 	  }
 	});
   
 	closeButton.addEventListener('click', () => {
 	  floatingWidget.style.display = 'none';
-	  toggleButton.textContent = 'GET IN TOUCH';
+	  toggleButton.textContent = '';
 	  mainContent.style.filter = 'none'; // Remove blur effect
 	});
   });

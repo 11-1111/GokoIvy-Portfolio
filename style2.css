@@ -5,7 +5,7 @@
   transform: scale(1); /* Default scale */
 	transition: transform 0.5s ease-in-out; /* Smooth scaling */
 
-  width: 100%;
+  width: 90%;
   /* height: 50vh; */
   margin-bottom: 500px;
   align-items: center;
@@ -42,15 +42,15 @@
   margin-top: -0.18em;
 }
 .sliderProjects .projects-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .sliderProjects .sub-projects-title{
-font-size: 4.5rem;
+font-size: 5.5rem;
 }
 .slider-container{
   margin-left: 15%;
-  width: 80%;
+  width: 90%;
   background-color: #000000;
  
   /* background-image: url('Images/bg-img.png');
@@ -90,8 +90,8 @@ font-size: 4.5rem;
 }
 
 /* image hover effect */
-.img-container {
-  position: relative; /* Ensure the overlay is positioned relative to the image */
+/* .img-container {
+  position: relative; 
 }
 
 .overlay {
@@ -100,17 +100,16 @@ font-size: 4.5rem;
   left: 0;
   top: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* Blur effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
   overflow: hidden;
   width: 97%;
-  height: 95%; /* Initial height set to 0 */
+  height: 95%; 
   transform: scale(0);
   transition: .3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: subtle border */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
-}
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 
 
 .img-container:hover .overlay {
@@ -126,7 +125,7 @@ font-size: 4.5rem;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-}
+} */
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -149,3 +148,4 @@ font-size: 4.5rem;
     max-width: 100%;
   }
 }
+

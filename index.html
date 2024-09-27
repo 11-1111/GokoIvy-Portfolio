@@ -35,7 +35,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 
-
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
 
   <title>My Website</title>
@@ -64,7 +66,8 @@
 
 
 
-  <div class="cursor"></div>
+  <div class="cursor-follow"></div>
+ 
   
 
 
@@ -78,10 +81,13 @@
       <div class="menu-container">
         
         <div class="link">
-          <a href="#three">04 <span class="horizontal_line"></span>CONTACTS</a>
+          <a href="#three">06 <span class="horizontal_line"></span>CONTACTS</a>
         </div>
         <div class="link">
-          <a href="#sliderProjects">04 <span class="horizontal_line"></span>PROJECTS</a>
+          <a href="#sliderProjects">05 <span class="horizontal_line"></span>PROJECTS</a>
+        </div>
+        <div class="link">
+          <a href="#projects" >04<span class="horizontal_line"></span>SERVICES</a>
         </div>
         <div class="link">
           <a href="#projects" >03 <span class="horizontal_line"></span>SKILL</a>
@@ -123,11 +129,12 @@
     </div>
 
    
-
-
-    <section id="gif-section" class=" panel  gif-section">
+    <div id="gif-section" class="gif-section">
       <img src="img/loader.gif" alt="Playing GIF" class="gif">
-    </section>
+    </div>
+  
+
+   
 
 
   <div class="body ">
@@ -141,8 +148,7 @@
    <!-- <animation on load  -->
    
   
-   <div class="gif-background"></div>
-
+  
   <!-- end of animation on load --> 
 
 
@@ -152,68 +158,54 @@
  
   <section id="hero" class=" panel e">
     
-    <!-- <div class="gif-background"></div> -->
-
-
-      <div class="hero-line-container " id="parallax">
-
-        <div class="extraBox"></div>
-        <div class="h">
-
-        <div class="name1">HELLO ,</div>
-        <div class="name1">
-        I'M GOKO<span></span></h1>
+    <div class="content">
+      
+  
+      <div class="text">
+        <p class="subtitle">Hello , I'm Ivy</p>
+        <h1 class="title">
+          <div class="overlap-hero  ">
+            <span class="abt">D</span>
+            <span class="abt">E</span>
+            <span class="abt">V</span>
+            <!-- <br> -->
+            <span class="abt">E</span>
+            <span class="abt">L</span>
+            <span class="abt">O</span>
+            <span class="abt">P</span>
+            <span class="abt">E</span>
+            <span class="abt">R</span>
+            
+           
+           
+          </div>
+        </h1>
+        <p class="desc">skilled in front-end development with a touch of back-end expertise,<br>  creating seamless web experiences.</p>
+        <a href="#services" class="readmore">Scroll For More</a>
       </div>
-</div>
-
-        <div class="who">
-         
-
-          <div class="overlap parallax-item2">
-            <span class="c" >C</span>
-            <span class="r">R</span>
-            <span class="e">E</span>
-            <span class="a">A</span>
-            <span class="t">T</span>
-            <span class="i">I</span>
-            <span class="v">V</span>
-            <span class="e2">E</span>
-
-          </div>
-                      
-        </div>
-        <div class="who2">
-   
-        <h1 class="name3">DEVELOPER<span></span></h1>
-        
-        </div>
-<!--         
-        <div class="container">
-          <h1 class="header">
-            23F * 734 <br />&nbsp;&nbsp; (8) &.09 <br />0x2_ U3
-          </h1>
+  
+      <div class="img-1">
+          <img src="img/animation.gif" alt="">
+      </div>
+  
+      
+  
+      <div class="img-2">
+          <img src="img/Programmer 2- Blank Poster.jpg" alt="">
+      </div>
+  
+      <div class="img-3">
+          <img src="img/Code ___.jfif" alt="">
+      </div>
+  
+    </div>
     
-          <div class="titles">
-            <div class="title title-1"><h1>Make</h1></div>
-            <div class="title title-2"><h1>A</h1></div>
-            <div class="title title-3"><h1>Difference</h1></div>
-          </div>
-          <ul class="blocks">
-            <li class="block-1 block"></li>
-            <li class="block-2 block"></li>
-            <li class="block-3 block"></li>
-            <li class="block-4 block"></li>
-            <li class="block-5 block"></li>
-            <li class="block-6 block"></li>
-          </ul>
-        </div> -->
-    
-    </div> 
+
+
   </section>
 
   <!-- End Hero Section  -->
-
-  
+ 
 
 
 
@@ -272,13 +264,13 @@
      </div>
       <div class="service-right ">
         <h1 class="sub ">What i do</h1>
-        <div class="pp">
+        <!-- <div class="pp">
           <p class="p">Create</p>
           <p class="p"><span> Amazing Experiences</span></p>
        
-        </div>
+        </div> -->
 
-        <p class="p">efficient, scalable, and maintainable software solutions. With a solid foundation in computer science and years of hands-on experience in full-stack development</p>
+        <p class="p">Hi, I’m Ivy, a passionate full-stack capable developer with front-end expertise in Vue.js, React, and PHP. Over the last few years, I’ve built scalable web applications and user-centric interfaces for businesses and startups. I love turning complex problems into simple, intuitive solutions. When I’m not coding, you’ll find me exploring the latest tech trends and honing my design skills. Take a look at my projects, and let’s collaborate on something awesome!</p>
        
         <a href="#projects" type="button" class="cta">CV</a>
       </div>
@@ -440,6 +432,34 @@
       </div>
       </div>
   </div>
+<div class="containerE">
+  <h1 class="projects-title ">Qualification</h1>
+  <h2 class="sub-projects-title ">Experience</h2>
+  
+ 
+  <div class="education-container experience-container">
+    
+    <div class="experience">
+      <h2>May 2024-November 2024</h2>
+      <h1>Pesapal</h1>
+      
+      <h3>Intern</h3>
+
+      
+    </div>
+
+
+    <div class="experience">
+      <h2>2024-Current</h2>
+      <h1>Sich Ltd</h1>
+      
+      <h3>Front-end Developer</h3>
+      <p>Part-time</p>
+    </div>
+      
+    </div>
+
+</div>
   <div class="containerC">
 <h1 class="projects-title">Browse my</h1>
 <h1 class="sub-projects-title">Software skills</h1>
@@ -680,7 +700,7 @@
   </div>
   <div class="section-body">
     <div class="section-text">
-      <h2 class="sub-projects-title">WEB APP DEVELOPMENT</h2>
+      <h2 class="sub-projects-title"><span>WEB</span> APP DEVELOPMENT</h2>
       <p>I Design and develop robust web applications using the Django framework and React.js, ensuring responsive and user-friendly interfaces tailored to client needs.</p>
     </div>
   </div> 
@@ -692,7 +712,7 @@
   </div>
   <div class="section-body">
     <div class="section-text">
-      <h2 class="sub-projects-title">Database Management and Optimization</h2>
+      <h2 class="sub-projects-title">Database Management <span>and Optimization</span> </h2>
       <p>I Provide database design, implementation, and optimization services using MySQL, ensuring data integrity, security, and efficient query performance for applications.</p>
       
     </div>
@@ -705,7 +725,7 @@
   </div>
   <div class="section-body">
     <div class="section-text">
-      <h2 class="sub-projects-title">API Integration and Development</h2>
+      <h2 class="sub-projects-title">API Integration <span>and Development</span>  </h2>
       <p>I Develop and integrate APIs to enhance the functionality of web applications, ensuring seamless communication between different software systems and services.</p>
     </div>
   </div>
@@ -718,7 +738,7 @@
   </div>
   <div class="section-body">
     <div class="section-text">
-      <h2 class="sub-projects-title">Technical Documentation and Support</h2>
+      <h2 class="sub-projects-title">Technical Documentation <span>and  Support</span></h2>
       <p>I Create documentation for software projects, including user manuals and maintenance guides, to facilitate easier updates and support for future development teams.</p> 
     </div>
   </div>
@@ -754,15 +774,14 @@
  
 
 
+
     <div class="row">
       <div class="column">
+
         <div class="img-container">
             <img src="img/_C__xampp_htdocs_SimpleBusTicket-PHP_index.html.png">
-            <div class="overlay">
-                <div class="text">BUS TICKETING SYSTEM 01</div>
-                <a href = "https://github.com/11-1111/ticketing-system" target="_blank" class="btn">View on Github</a>
-            </div>
         </div>
+
         <div class="img-container">
             <img src="img/localhost_SimpleBusTicket-PHP_flight_signup22.php.png">
             <div class="overlay">
@@ -851,8 +870,9 @@
       <h2 class="outer-cont-sub-title">The secret of getting ahead is getting started ~ Mark Twain ~</h2>
     </div>
     <div class="outer-cont-right">
-      <button id="toggleButton" class="get-in-touch">GET IN TOUCH</button>
+      <button id="toggleButton" class=" btn-flip" data-back="click me" data-front="get-in-touch"></button>
      </div>
+
 </div>
 </div>
      <div id="floatingWidget" class="widget hidden">
@@ -860,7 +880,7 @@
 <button id="closeButton">x</button>
 </div> -->
       <div class="c-title-div">
-        <button class="item-1">
+        <button class="item-1" id="item-1">
           <span class="inner">
             <span class="label">Close</span>
           </span>
@@ -874,7 +894,22 @@
 <ul class="ul2">
 <li><a href="mailto:gokoivy2@gmail.com" class="aa2">gokoivy2@gmail.com</a></li>
 <li><a href="tel:+25471-879-6756" class="aa2">+25471-879-6756</a></li>
-<ul>
+<li> <img
+  src="./img/linked.png"
+  alt="My LinkedIn profile"
+  class="icon"
+  onclick="location.href='https://www.linkedin.com/in/goko-ivy-04108021b/recent-activity/all/'"
+/> <p class="aa2">linkedIn</p>
+</li>
+<li>
+  <img
+  src="./img/git.png"
+  alt="My Github profile"
+  class="icon"
+  onclick="location.href='https://github.com/11-1111'"
+/><p class="aa2">GIT</p>
+</li>
+</ul>
   <button type="submit" class="submit">SEND</button>
 </div>
 
@@ -1000,9 +1035,136 @@
   </script>
 
 
+<script>
+  var cursor = $(".cursor"),
+      follower = $(".cursor-follower");
+
+  var posX = 0,
+      posY = 0,
+      mouseX = 0,
+      mouseY = 0;
+
+  TweenMax.to({}, 0.016, {
+      repeat: -1,
+      onRepeat: function() {
+          posX += (mouseX - posX) / 9;
+          posY += (mouseY - posY) / 9;
+
+          TweenMax.set(follower, {
+              css: {
+                  left: posX - 20,
+                  top: posY - 20
+              }
+          });
+
+          TweenMax.set(cursor, {
+              css: {
+                  left: mouseX,
+                  top: mouseY
+              }
+          });
+      }
+  });
+
+  $(document).on("mousemove", function(e) {
+      mouseX = e.pageX;
+      mouseY = e.pageY;
+  });
+
+  $(".img-container img").on("mouseenter", function() {
+      cursor.addClass("active");
+      follower.addClass("active");
+  });
+
+  $(".img-container img").on("mouseleave", function() {
+      cursor.removeClass("active");
+      follower.removeClass("active");
+  });
+</script>
 
 
 
+<script>
+  TweenMax.from('.subtitle', 1, {
+    delay: 5.8, // 2.8 + 5 seconds
+    opacity: 0,
+    x: -20,
+    ease: Expo.easeInOut
+  });
+
+  TweenMax.to('.title', 1, {
+    delay: 5.2, // 2.2 + 5 seconds
+    width: '100%',
+    overflow: 'visible',
+    ease: Expo.easeInOut
+  });
+
+  TweenMax.from('.desc', 1, {
+    delay: 5.8, // 2.8 + 5 seconds
+    opacity: 0,
+    x: -20,
+    ease: Expo.easeInOut
+  });
+
+  TweenMax.from('.readmore', 1, {
+    delay: 5.8, // 2.8 + 5 seconds
+    opacity: 0,
+    x: -20,
+    ease: Expo.easeInOut
+  });
+
+  TweenMax.to('.img-1', 1, {
+    delay: 5.2, // 2.2 + 5 seconds
+    width: '450px',
+    ease: Expo.easeInOut
+  });
+
+  TweenMax.to('.img-2', 1, {
+    delay: 5.2, // 2.2 + 5 seconds
+    width: '300px',
+    ease: Expo.easeInOut
+  });
+
+  TweenMax.to('.img-3', 1, {
+    delay: 5.2, // 2.2 + 5 seconds
+    width: '300px',
+    ease: Expo.easeInOut
+  });
+
+  TweenMax.to('.first', 1.5, {
+    delay: 4.2, // .2 + 5 seconds
+    left: '-100%',
+    ease: Expo.easeInOut
+  });
+
+  TweenMax.to('.second', 1.5, {
+    delay: 4.4, // .4 + 5 seconds
+    left: '-100%',
+    ease: Expo.easeInOut
+  });
+
+  TweenMax.to('.third', 1.5, {
+    delay: 4.6, // .6 + 5 seconds
+    left: '-100%',
+    ease: Expo.easeInOut
+  });
+</script>
+
+<script>
+  // GIF appears initially
+  TweenMax.to('.img-1', 1, {
+    opacity: 1,
+    ease: Expo.easeInOut
+  });
+
+  // Fade out the GIF after 5 seconds
+  setTimeout(function() {
+    TweenMax.to('.img-1', 1, {
+      opacity: 0,
+      ease: Expo.easeInOut
+    });
+  }, 8000); // 5000ms = 5 seconds
+</script>
 
 </body>
 
