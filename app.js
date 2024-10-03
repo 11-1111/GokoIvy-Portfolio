@@ -95,38 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   
-//   function disableScroll() {
-//     document.body.style.overflow = 'hidden'; // Disable scrolling
-// }
 
-// function enableScroll() {
-//     document.body.style.overflow = ''; // Re-enable scrolling
-// }
-
-// // Select all span elements
-// const spans = document.querySelectorAll('#parallax .overlap span');
-
-// // Listen for the animation end event on the last span element
-// const lastSpan = spans[spans.length - 1];
-
-// disableScroll(); // Disable scrolling at the start of the animation
-
-// lastSpan.addEventListener('animationend', function() {
-//     // After the animation ends, wait 1 second
-//     setTimeout(() => {
-//         // Smoothly scroll to the 'services' section
-//         document.querySelector('#services').scrollIntoView({
-//             behavior: 'smooth',
-//             block: 'start'
-//         });
-
-//         // Re-enable scrolling after the auto-scroll completes (adjust timeout based on scroll duration)
-//         setTimeout(() => {
-//             enableScroll();
-//         }, 1500); // Adjust this duration if your scroll takes longer than 1.5 seconds
-
-//     }, 1000); // 1 second delay before scrolling
-// });
 
   
 //shuffle 
@@ -174,8 +143,34 @@ $(document).ready(function() {
 
 
 
-// offers section 
+// hero section zoom
 
+gsap.registerPlugin(ScrollTrigger);
+
+// Timeline for zoom effect on "DEVELOPER"
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#hero",
+    start: "top 0%",  // When the hero section starts at the top of the viewport
+    end: "bottom top", // Ends when the bottom of the hero reaches the top of the viewport
+    scrub: true,       // Smooth scrubbing effect as you scroll
+    pin: true,         // Pin the hero section during the animation
+    anticipatePin: 1,  // Adds slight delay before unpinning for smooth transition
+  }
+});
+
+// Zoom in "DEVELOPER" text
+tl.to(".overlap-hero", {
+  scale: 3, // Zoom factor
+  duration: 1.5,
+  ease: "power2.out",
+  transformOrigin: "center center"
+})
+.to("#hero", {
+  opacity: 0, // Fade out hero section to reveal the next section
+  duration: 1,
+  ease: "power2.inOut"
+}, "-=0.5")// Starts fading out halfway through the zoom
 
 
 
@@ -405,7 +400,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	gsap.registerPlugin(ScrollTrigger);
   
 	gsap.fromTo(
-	  ".projects", 
+	  ".projec", 
 	  { scale: 0.5 }, // Initial scale (shrink when not in view)
 	  {
 		scale: 1.05, // Full scale (zoom when in view)
@@ -483,8 +478,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			progressValue++;
 			valueContainer.textContent = `${progressValue}%`;
 			progressBar.style.background = `conic-gradient(
-			  bisque ${progressValue * 3.6}deg,
-			  #424242 ${progressValue * 3.6}deg
+			  #adbbda ${progressValue * 3.6}deg,
+			  #121212 ${progressValue * 3.6}deg
 			)`;
 			if (progressValue >= progressEndValue) {
 			  clearInterval(progress);
@@ -527,7 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		  // Use requestAnimationFrame to trigger reflow and ensure the transition works
 		  requestAnimationFrame(() => {
 			skillBar.style.transition = 'width 1.5s ease-in-out';
-			skillBar.style.backgroundColor = 'crimson';
+			skillBar.style.backgroundColor = '#ADBBDA';
 			skillBar.style.width = percentage;
 		  });
   
@@ -659,4 +654,37 @@ document.addEventListener('DOMContentLoaded', () => {
 	  mainContent.style.filter = 'none'; // Remove blur effect
 	});
   });
+  
+//   //contact button 
+//   let tl = gsap.timeline({
+// 	delay: 1, // Add 6000ms (6 seconds) delay
+// 	scrollTrigger: {
+// 	  trigger: "#services", // Trigger element (starts the animation when #btn comes into view)
+// 	  start: "top 80%", // Adjust this to determine when the animation should start (top of #btn hits 80% of the viewport)
+// 	  toggleActions: "restart none none none", // Restarts the animation each time it comes into view
+// 	}
+//   });
+  
+//   tl.fromTo(
+// 	"#services",
+// 	{ scaleX: 0.02, scaleY: 0 },
+// 	{ scaleY: 1, transformOrigin: "center center", duration: 0.3 }
+//   );
+//   tl.to("#services", { scaleX: 1, duration: 0.6 });
+//   tl.to("#container", { scale: 1, duration: 0.6, ease: "back" }, "-=0.2");
+  
+
+//bounce effect
+
+window.addEventListener('scroll', function () {
+	var box = document.querySelector('#three');
+	var position = box.getBoundingClientRect();
+
+	if (position.top < window.innerHeight && 
+	position.bottom >= 0) {
+		box.style.animationPlayState = 'running';
+	} else {
+		box.style.animationPlayState = 'paused';
+	}
+});
   
