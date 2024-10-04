@@ -1,5 +1,44 @@
 
-console.clear();
+$(function () { 
+    // Media query to check if screen is larger than 1024px (adjustable)
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        
+        // Create the ScrollMagic controller
+        var controller = new ScrollMagic.Controller();
+
+        // Timeline for the animation
+        var slides = new TimelineMax()
+            .to("#slideContainer", 0.5, {z: -150})    
+            .to("#slideContainer", 1, {x: "-50%"})  
+            .to("#slideContainer", 0.5, {z: 0})
+            .to("#slideContainer", 0.5, {z: -150, delay: 1})
+            .to("#slideContainer", 1, {x: "-100%"})
+            .to("#slideContainer", 0.5, {z: 0});
+
+        // Create a ScrollMagic scene
+        var scene = new ScrollMagic.Scene({
+            triggerElement: "#pinContainer",
+            triggerHook: "onLeave",
+            duration: "200%",
+            markers: false // Set to true if you want to debug
+        })
+        .setPin("#pinContainer")
+        .setTween(slides)
+        .addTo(controller);
+    } else {
+        console.log("Screen is too small, no animation applied");
+    }
+});
+
+
+
+
+
+
+
+
+
+
 
 // Select the circle element
 const cursorElement = document.querySelector('.cursor-follow');
@@ -143,8 +182,6 @@ $(document).ready(function() {
 
 
 
-// hero section zoom
-
 gsap.registerPlugin(ScrollTrigger);
 
 // Timeline for zoom effect on "DEVELOPER"
@@ -170,8 +207,7 @@ tl.to(".overlap-hero", {
   opacity: 0, // Fade out hero section to reveal the next section
   duration: 1,
   ease: "power2.inOut"
-}, "-=0.5")// Starts fading out halfway through the zoom
-
+}, "-=0.5")// Starts fading out halfway through the zoom  
 
 
 
@@ -276,6 +312,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
   });
   
+//   document.addEventListener('DOMContentLoaded', () => {
+// 	// Register the ScrollTrigger plugin
+// 	gsap.registerPlugin(ScrollTrigger);
+  
+// 	// Create a ScrollTrigger instance
+// 	ScrollTrigger.create({
+// 	  trigger: ".overlap-projectsM", // Element to trigger the animation
+// 	  start: "top 50%", // Start when the top of the trigger element is 80% from the top of the viewport
+// 	  end: "bottom top", // End when the bottom of the trigger element is at the top of the viewport
+// 	  onEnter: () => {
+// 		gsap.from(".overlap-projectsM span", {
+// 		  opacity: 0,
+// 		  y: 50,
+// 		  duration: 0.1,
+// 		  stagger: 0.08,
+// 		  ease: "power2.out",
+// 		  pin: ".projects"
+// 		});
+// 	  },
+// 	  onLeaveBack: () => {
+// 		// Optional: Define what happens when scrolling back past the element
+// 		gsap.to(".overlap-projectsM span", {
+// 		  opacity: 0,
+// 		  y: 50,
+// 		  duration: 0.2,
+// 		  stagger: 0.08,
+// 		  ease: "power2.out"
+// 		});
+// 	  },
+// 	  markers: false // Optional: show markers for debugging
+// 	});
+//   });
+  
 
 
 
@@ -301,6 +370,9 @@ gsap.utils.toArray('.parallax-item').forEach(item => {
     }
   );
 });
+
+
+
 
  // Register the ScrollTrigger plugin
  gsap.registerPlugin(ScrollTrigger);
@@ -343,7 +415,26 @@ gsap.utils.toArray('.parallax-item').forEach(item => {
    );
  });
 
+  // Register the ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
 
+  // Apply parallax effect to the elements
+  gsap.utils.toArray('.parallax-item4').forEach(item => {
+	gsap.fromTo(item, 
+	  { y: 100 }, // Start position (e.g., below the normal position)
+	  { 
+		y: -400, // End position (moves up as you scroll)
+		scrollTrigger: {
+		  trigger: item, // The element that triggers the effect
+		  start: "top 80%", // Start when the element comes into view
+		  end: "bottom top", // End when the element leaves the view
+		  scrub: true, // Smoothly animate the parallax effect based on scroll
+		  markers: false,
+		}
+	  }
+	);
+  });
+  
    
 
 
@@ -396,11 +487,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
   document.addEventListener("DOMContentLoaded", function () {
 	gsap.registerPlugin(ScrollTrigger);
   
 	gsap.fromTo(
-	  ".projec", 
+	  ".servicesM", 
+	  { scale: 0.5 }, // Initial scale (shrink when not in view)
+	  {
+		scale: 1.05, // Full scale (zoom when in view)
+		ease: "power1.out",
+		scrollTrigger: {
+		  trigger: ".servicesM",
+		  start: "top 300%", // When the top of the section is 80% from the top of the viewport
+		  end: "bottom 10%", // When the bottom of the section reaches 20% from the top
+		  scrub: true, // Smooth transition during scroll
+		  toggleActions: "play reverse play reverse", // Revert to initial state when scrolling out
+		},
+	  }
+	);
+  });
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+	gsap.registerPlugin(ScrollTrigger);
+  
+	gsap.fromTo(
+	  ".projects", 
 	  { scale: 0.5 }, // Initial scale (shrink when not in view)
 	  {
 		scale: 1.05, // Full scale (zoom when in view)
@@ -416,7 +539,39 @@ document.addEventListener("DOMContentLoaded", function () {
 	);
   });
 
-
+  document.addEventListener("DOMContentLoaded", function () {
+	gsap.registerPlugin(ScrollTrigger);
+  
+	function createScrollAnimation() {
+	  const isMobile = window.innerWidth <= 600; // Set mobile breakpoint (600px)
+  
+	  gsap.fromTo(
+		".projects",
+		{ scale: isMobile ? 0.7 : 0.5 }, // Adjust the initial scale for mobile
+		{
+		  scale: isMobile ? 1 : 1.05, // Adjust the final scale for mobile
+		  ease: "power1.out",
+		  scrollTrigger: {
+			trigger: ".projects",
+			start: "top 500%", // When the top of the section is 80% from the top of the viewport
+			end: "bottom 20%", // When the bottom of the section reaches 20% from the top
+			scrub: true, // Smooth transition during scroll
+			toggleActions: "play reverse play reverse", // Revert to initial state when scrolling out
+		  },
+		}
+	  );
+	}
+  
+	// Run on load
+	createScrollAnimation();
+  
+	// Recreate the animation when the window is resized
+	window.addEventListener("resize", function () {
+	  ScrollTrigger.refresh(); // Refresh ScrollTrigger to recalculate positions
+	  createScrollAnimation(); // Recreate the animation based on the new screen size
+	});
+  });
+  
 
   document.addEventListener("DOMContentLoaded", function () {
 	gsap.registerPlugin(ScrollTrigger);

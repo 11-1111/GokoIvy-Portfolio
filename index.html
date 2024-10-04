@@ -49,6 +49,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+
+
+   <!-- jQuery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+   <!-- GSAP TweenMax -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+   
+   <!-- ScrollMagic -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+   
+   <!-- ScrollMagic GSAP Plugin -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+   
+   <!-- ScrollMagic Debug Indicators Plugin (optional for debugging) -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   
 
 
@@ -153,7 +172,8 @@
   <!-- end of animation on load --> 
 
 
-
+  <div id="pinContainer">
+    <div id="slideContainer">
   <!-- Hero Section  -->
 
  
@@ -212,7 +232,7 @@
  
 
   <!-- Service Section -->
-  <section id="services" class="s">
+  <section id="services" class="s parallax-item4">
    
 
     <div class="services container " id="container">
@@ -283,7 +303,8 @@
 
 
 
-
+</div>
+</div>
 
 
   <!-- ServiceMobile Section -->
@@ -375,21 +396,27 @@
       <div class="projects-title-div">
 
         
-        <div class="overlap-projects  ">
+        <div class="overlap-projects">
             <span class="abt">S</span>
             <span class="abt">K</span>
             <span class="abt">I</span>
             <span class="abt">L</span>
-            <span class="abt">L</span>
-            
-           
-           
+            <span class="abt">L</span>  
           </div>
+
+          <div class="overlap-projectsM">
+          <span>S</span>
+          <span>K</span>
+          <span>I</span>
+          <span>L</span>
+          <span>L</span>
+         
+        </div>
       </div>
      
       <div class="sub-projects">
         
-    <div class="projects-left parallax-item ">
+    <div class="projects-left parallax-item">
       <h1 class="projects-title ">Qualification</h1>
       <h2 class="sub-projects-title ">My education</h2>
       <div class="vertical-line"></div>
@@ -537,145 +564,6 @@
   <!-- End Projects Section -->
 
 
-<!--Mobile Projec section-->
-<section id="projectsM" class="pM">
-  <div class="projectsM containerM">
-    <div class="projects-title-div">
-      <div class="overlap-projects">
-          <span>S</span>
-          <span>K</span>
-          <span>I</span>
-          <span>L</span>
-          <span>L</span>
-         
-        </div>
-    </div>
-   
-    <div class="sub-projectsM">
-      
-  <div class="projects-leftM">
-    <h1 class="projects-title">Qualification</h1>
-    <h2 class="sub-projects-title">My education</h2>
-    <div class="vertical-line"></div>
-  
-    <div class="education-container">
-      
-      <div class="education">
-        <h2>2020-2024</h2>
-        <h1>Kenyatta University</h1>
-        
-        <h3>Bachelor of Science (Computer Science)</h3>
-        <p>cum GPA = 68points</p>
-      </div>
-    </div>
-    
-  </div>
-  <div class="projects-rightM">
-    <h1 class="projects-title">Expertise</h1>
-    <h2 class="sub-projects-title">My skill</h2>
-    <div class="skills">
-      <div class="skill">
-        <div class="skill-name">HTML</div>
-        <div class="skill-bar">
-          <div class="skill-per" per="90%" style="max-width:90%"></div>
-        </div>
-      </div>
-    
-      <div class="skill">
-        <div class="skill-name">CSS</div>
-        <div class="skill-bar">
-          <div class="skill-per" per="70%" style="max-width:70%"></div>
-        </div>
-      </div>
-    
-      <div class="skill">
-        <div class="skill-name">Javascript</div>
-        <div class="skill-bar">
-          <div class="skill-per" per="60%" style="max-width:60%"></div>
-        </div>
-      </div>
-    
-    
-    </div>
-    </div>
-</div>
-<h1 class="projects-title">Browse my</h1>
-<h1 class="sub-projects-title">Software skills</h1>
-<div class="containerC">
-
-
-<div class="circle-graphs">
-
-
-<div class="top">
-<div class="one-circle">
-  <div class="circular-progress" data-percentage="75">
-  <div class="value-container">0%</div>
-</div>
-<p>JS</p>
-</div>
-
-<div class="one-circle">
-  <div class="circular-progress" data-percentage="90">
-  <div class="value-container">0%</div>
-</div>
-<p>TAILWIND</p>
-</div>
-
-<div class="one-circle">
-  <div class="circular-progress" data-percentage="65">
-  <div class="value-container">0%</div>
-</div>
-<p>VUE</p>
-</div>
-
-
-<div class="one-circle">
-  <div class="circular-progress" data-percentage="">
-  <div class="value-container">0%</div>
-</div>
-<p>GO</p>
-</div>
-</div>
-
-<div class="bottom">
-<div class="one-circle">
-  <div class="circular-progress" data-percentage="75">
-  <div class="value-container">0%</div>
-</div>
-<p>REACT</p>
-</div>
-
-<div class="one-circle">
-<div class="circular-progress" data-percentage="75">
-<div class="value-container">0%</div>
-</div>
-<p>PHP</p>
-</div>
-
-<div class="one-circle">
-<div class="circular-progress" data-percentage="75">
-<div class="value-container">0%</div>
-</div>
-<p>NODEJS</p>
-</div>
-</div>
-
-  
-    
-  
-</div>
-</div>
-
-
-</div>
-
-
-
-  
-</section>
-<!--Mobile projects Section-->
-
 <!-- 
 <section id ="offers" class="offers">
 <div class="containerS ">
@@ -701,6 +589,19 @@
     <span class="abt">S</span>
      
     </div>
+
+    <div class="overlap-offerM">
+      <span class="abt">S</span>
+      <span class="abt">E</span>
+      <span class="abt">R</span>
+      <span class="abt">V</span>
+      <span class="abt">I</span>
+      <span class="abt">C</span>
+      <span class="abt">E</span>
+      <span class="abt">S</span>
+       
+      </div>
+
 </div>
 <div class="bg"></div>
   
@@ -1008,14 +909,20 @@
  
   //projects
   ScrollReveal().reveal('.services-title',{delay:50 , origin: 'bottom'});
-  ScrollReveal().reveal('.abt',{delay:150 , origin: 'right'});
+  if (window.innerWidth <= 600) {
+  ScrollReveal().reveal('.abt', {
+    delay: 150,
+    origin: 'right'
+  });
+}
+
  
   //worl
   ScrollReveal().reveal('.services-title',{delay:50 , origin: 'bottom'});
   ScrollReveal().reveal('.number1',{delay:50 , origin: 'bottom'});
  
-  ScrollReveal().reveal('.service-left',{delay:20 , origin: 'right'});
-  ScrollReveal().reveal('.service-right',{delay:700 , origin: 'left'});
+  // ScrollReveal().reveal('.service-left',{delay:20 , origin: 'right'});
+  // ScrollReveal().reveal('.service-right',{delay:700 , origin: 'left'});
 
   ScrollReveal().reveal('.projects-left',{delay:20 , origin: 'right'});
   // ScrollReveal().reveal('.projects-right',{delay:20 , origin: 'left'});

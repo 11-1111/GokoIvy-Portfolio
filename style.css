@@ -7,6 +7,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+
+
+
+
+#pinContainer {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	-webkit-perspective: 1000;
+	perspective: 1000;
+	display:flex;
+  }
+	#slideContainer {
+	  width: 200%;
+	  height: 100%;
+	  position: absolute;
+  }
+  #hero, #services  {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+  top: 0;
+}
+ 
+
+  #services {
+  
+    left: 50%;
+	padding-top: 7%;
+	padding-left: 4%;
+	padding-right: 5%;
+}
+
+
 .overlap-hero{
 	font-family: "Roboto Condensed", sans-serif;
 	width: 100%;
@@ -131,7 +166,7 @@ section {
   
   .img-1 {
 	/* position: absolute; */
-	transform: translate(-100%, -150%);
+	transform: translate(-100%, -100%);
     background: url('./img/img-1.jpg') no-repeat;
     background-position: center;
     background-size: cover;
@@ -452,12 +487,12 @@ p {
 #hero {
 background-color: #121212 ;
 	margin-bottom:100px ;
-	width: 95%;
+	/* width: 95%; */
 	display:flex;
 	justify-content: flex-start;
 	margin-top: 0;
 	padding-top: 0;
-	height: 100vh;
+	/* height: 100vh; */
 	
   }
 
@@ -668,25 +703,25 @@ margin-left: auto;
 	display: none;
 }
 #services  {
-	display: flex;
+	/* /* display: flex;
 	flex-direction: column;
-	width:100%;
-	height: 100vh;
-
+	/* width:100%;
+	height: 100vh; */
+/* 
 	background-color: #121212;
 
 	
 	margin-top: 0px;
 	margin-bottom: 200px;
 	padding-top:0px;
-	/* transform: scale(0); */
-	position: relative;
+	position: relative;  */
 	
+
 }
 .services {
 	display: flex;
 	flex-direction: column;
-	width:90%;
+	/* width:90%; */
 
 }
 
@@ -895,7 +930,7 @@ margin-bottom: 20px;
 .service-left {
   width:100%;
 	flex-basis: 50%;	
-	height:80vh;
+	height:70vh;
 	margin-left:1%;
 	padding: 10px;
 	padding-left: 20px;
@@ -903,7 +938,7 @@ margin-bottom: 20px;
 	transition : 1s;
 	border: 2px solid #e3d5c3;
 	/* border: 5px solid #2d2a27; */
-	margin-top: 0%;
+	margin-top: 1%;
 }
   
   
@@ -918,7 +953,7 @@ margin-bottom: 20px;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	height:80vh;
+	height:70vh;
  background-color: #121212;
 	flex-basis: 50%;
 	margin-left: -20%;
@@ -1001,7 +1036,9 @@ margin-bottom: 20px;
 	
 	
 	}
-
+.overlap-projectsM {
+	display: none;
+}
 	.overlap-projects{
 		font-family: "Roboto Condensed", sans-serif;
 		width: 100%;
